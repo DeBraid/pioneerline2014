@@ -1,4 +1,4 @@
-Template.dashboard.helpers({
+Template.adwave.helpers({
     settings: function () {
         return {
             rowsPerPage: 10,
