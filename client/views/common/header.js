@@ -1,4 +1,4 @@
-Template.header.helpers({
+Template.nav.helpers({
   messages: function () {
     return Messages.find();
   },
@@ -7,7 +7,7 @@ Template.header.helpers({
   }
 })
 
-Template.header.events({
+Template.nav.events({
   'click .log-out': function () {
     Meteor.logout();
   }

@@ -69,7 +69,34 @@ Router.map(function() {
     path: '/'
   });
 
+  this.route('products', {
+    path: '/products',
+    template: 'productsList',
+    waitOn: function () {
+      return Meteor.subscribe('adwave');
+    },
+    data: function () {
+      return {
+        adwave: Adwave.find()
+      }
+    }
+  });
+
+   this.route('dashboard', {
+    path: '/dashboard',
+    template: 'dashboard',
+    waitOn: function () {
+      return Meteor.subscribe('adwave');
+    },
+    data: function () {
+      return {
+        adwave: Adwave.find()
+      }
+    }
+  });
+
   this.route('content');
+
 
   // Users
 

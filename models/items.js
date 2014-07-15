@@ -6,10 +6,11 @@ All code related to the Items collection goes here.
 
 /+ ---------------------------------------------------- */
 
+Adwave = new Meteor.Collection('adwave');
+
 Items = new Meteor.Collection('items');
 
 // Allow/Deny
-
 Items.allow({
   insert: function(userId, doc){
     return can.createItem(userId);
