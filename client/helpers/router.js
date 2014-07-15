@@ -82,15 +82,28 @@ Router.map(function() {
     }
   });
 
-   this.route('dashboard', {
-    path: '/dashboard',
-    template: 'dashboard',
+   this.route('adwave', {
+    path: '/adwave',
+    template: 'adwave',
     waitOn: function () {
       return Meteor.subscribe('adwave');
     },
     data: function () {
       return {
         adwave: Adwave.find()
+      }
+    }
+  });
+
+  this.route('latexonecolround', {
+    path: '/latexonecolround',
+    template: 'latexonecolround',
+    waitOn: function () {
+      return Meteor.subscribe('latexonecolround');
+    },
+    data: function () {
+      return {
+        latexonecolround: Latexonecolround.find()
       }
     }
   });

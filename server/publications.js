@@ -16,6 +16,10 @@ Meteor.publish('adwave', function() {
   return Adwave.find();
 });
 
+Meteor.publish('latexonecolround', function() {
+  return Latexonecolround.find();
+});
+
 // Publish a single item
 
 Meteor.publish('singleItem', function(id) {
