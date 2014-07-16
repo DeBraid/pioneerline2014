@@ -36,6 +36,10 @@ Meteor.publish('quicklinkround', function() {
   return Quicklinkround.find();
 });
 
+Meteor.publish('threecolourplus', function() {
+  return Threecolourplus.find();
+});
+
 // Publish a single item
 
 Meteor.publish('singleItem', function(id) {

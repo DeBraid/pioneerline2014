@@ -136,6 +136,20 @@ Router.map(function() {
   });
 
 
+  this.route('threecolourplus', {
+    path: '/threecolourplus',
+    template: 'threecolourplus',
+    waitOn: function () {
+      return Meteor.subscribe('threecolourplus');
+    },
+    data: function () {
+      return {
+        threecolourplus: Threecolourplus.find()
+      }
+    }
+  });
+
+
   this.route('adwrap', {
     path: '/adwrap',
     template: 'adwrap',

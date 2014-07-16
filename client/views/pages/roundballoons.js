@@ -1,4 +1,4 @@
-Template.roundballons.helpers({
+Template.roundballoons.helpers({
     settings: function () {
         return {
             rowsPerPage: 10,
