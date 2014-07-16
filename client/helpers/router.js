@@ -149,6 +149,20 @@ Router.map(function() {
     }
   });
 
+   this.route('twocolourballoons', {
+    path: '/twocolourballoons',
+    template: 'twocolourballoons',
+    waitOn: function () {
+      return Meteor.subscribe('twocolourballoons');
+    },
+    data: function () {
+      return {
+        twocolourballoons: Twocolourballoons.find()
+      }
+    }
+  });
+  
+
 
   this.route('adwrap', {
     path: '/adwrap',
@@ -164,6 +178,8 @@ Router.map(function() {
   });
 
   this.route('content');
+  this.route('contact');
+
 
 
   // Users

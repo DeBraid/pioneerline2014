@@ -40,6 +40,11 @@ Meteor.publish('threecolourplus', function() {
   return Threecolourplus.find();
 });
 
+Meteor.publish('twocolourballoons', function() {
+  return Twocolourballoons.find();
+});
+
+
 // Publish a single item
 
 Meteor.publish('singleItem', function(id) {
