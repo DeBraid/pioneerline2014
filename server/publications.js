@@ -28,6 +28,10 @@ Meteor.publish('roundballoons', function() {
   return Roundballoons.find();
 });
 
+Meteor.publish('heartballoons', function() {
+  return Heartballoons.find();
+});
+
 // Publish a single item
 
 Meteor.publish('singleItem', function(id) {

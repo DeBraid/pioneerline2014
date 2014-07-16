@@ -108,6 +108,19 @@ Router.map(function() {
     }
   });
 
+  this.route('heartballoons', {
+    path: '/heartballoons',
+    template: 'heartballoons',
+    waitOn: function () {
+      return Meteor.subscribe('heartballoons');
+    },
+    data: function () {
+      return {
+        heartballoons: Heartballoons.find()
+      }
+    }
+  });
+
   this.route('adwrap', {
     path: '/adwrap',
     template: 'adwrap',
