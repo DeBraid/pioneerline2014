@@ -6,8 +6,6 @@ All code related to the collection goes here.
 
 Items = new Meteor.Collection('items');
 
-
-
 // Allow/Deny
 Items.allow({
   insert: function(userId, doc){

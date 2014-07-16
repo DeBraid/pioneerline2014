@@ -20,6 +20,10 @@ Meteor.publish('latexonecolround', function() {
   return Latexonecolround.find();
 });
 
+Meteor.publish('adwrap', function() {
+  return Adwrap.find();
+});
+
 // Publish a single item
 
 Meteor.publish('singleItem', function(id) {

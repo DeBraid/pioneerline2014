@@ -95,6 +95,19 @@ Router.map(function() {
     }
   });
 
+  this.route('adwrap', {
+    path: '/adwrap',
+    template: 'adwrap',
+    waitOn: function () {
+      return Meteor.subscribe('adwrap');
+    },
+    data: function () {
+      return {
+        adwrap: Adwrap.find()
+      }
+    }
+  });
+
   this.route('content');
 
 
