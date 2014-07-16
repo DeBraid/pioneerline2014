@@ -1,14 +1,14 @@
 /* ---------------------------------------------------- +/
 
-## Items ##
-
-All code related to the Items collection goes here. 
+All code related to the collection goes here. 
 
 /+ ---------------------------------------------------- */
 
 Adwave = new Meteor.Collection('adwave');
 
 Items = new Meteor.Collection('items');
+
+Latexonecolround = new Meteor.Collection('latexonecolround');
 
 Latexonecolround = new Meteor.Collection('latexonecolround');
 
