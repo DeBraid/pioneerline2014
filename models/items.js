@@ -10,6 +10,8 @@ Adwave = new Meteor.Collection('adwave');
 
 Items = new Meteor.Collection('items');
 
+Latexonecolround = new Meteor.Collection('latexonecolround');
+
 // Allow/Deny
 Items.allow({
   insert: function(userId, doc){

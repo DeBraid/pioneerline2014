@@ -69,20 +69,7 @@ Router.map(function() {
     path: '/'
   });
 
-  this.route('products', {
-    path: '/products',
-    template: 'productsList',
-    waitOn: function () {
-      return Meteor.subscribe('adwave');
-    },
-    data: function () {
-      return {
-        adwave: Adwave.find()
-      }
-    }
-  });
-
-   this.route('adwave', {
+  this.route('adwave', {
     path: '/adwave',
     template: 'adwave',
     waitOn: function () {
