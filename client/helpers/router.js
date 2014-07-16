@@ -121,6 +121,21 @@ Router.map(function() {
     }
   });
 
+
+  this.route('quicklinkround', {
+    path: '/quicklinkround',
+    template: 'quicklinkround',
+    waitOn: function () {
+      return Meteor.subscribe('quicklinkround');
+    },
+    data: function () {
+      return {
+        quicklinkround: Quicklinkround.find()
+      }
+    }
+  });
+
+
   this.route('adwrap', {
     path: '/adwrap',
     template: 'adwrap',

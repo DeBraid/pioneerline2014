@@ -32,6 +32,10 @@ Meteor.publish('heartballoons', function() {
   return Heartballoons.find();
 });
 
+Meteor.publish('quicklinkround', function() {
+  return Quicklinkround.find();
+});
+
 // Publish a single item
 
 Meteor.publish('singleItem', function(id) {
