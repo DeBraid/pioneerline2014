@@ -4,13 +4,9 @@ All code related to the collection goes here.
 
 /+ ---------------------------------------------------- */
 
-Adwave = new Meteor.Collection('adwave');
-
 Items = new Meteor.Collection('items');
 
-Latexonecolround = new Meteor.Collection('latexonecolround');
 
-Latexonecolround = new Meteor.Collection('latexonecolround');
 
 // Allow/Deny
 Items.allow({
