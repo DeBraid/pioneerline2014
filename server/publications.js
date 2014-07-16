@@ -24,6 +24,10 @@ Meteor.publish('adwrap', function() {
   return Adwrap.find();
 });
 
+Meteor.publish('roundballoons', function() {
+  return Roundballoons.find();
+});
+
 // Publish a single item
 
 Meteor.publish('singleItem', function(id) {

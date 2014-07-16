@@ -95,6 +95,19 @@ Router.map(function() {
     }
   });
 
+  this.route('roundballoons', {
+    path: '/roundballoons',
+    template: 'roundballoons',
+    waitOn: function () {
+      return Meteor.subscribe('roundballoons');
+    },
+    data: function () {
+      return {
+        roundballoons: Roundballoons.find()
+      }
+    }
+  });
+
   this.route('adwrap', {
     path: '/adwrap',
     template: 'adwrap',
