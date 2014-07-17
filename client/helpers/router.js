@@ -12,7 +12,6 @@ Router.configure({
   layoutTemplate: 'layout',
   loadingTemplate: 'loading',
   notFoundTemplate: 'notFound',
-  charges: 'charges',
 });
 
 // Filters
