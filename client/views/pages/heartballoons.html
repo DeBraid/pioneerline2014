@@ -1,4 +1,7 @@
 <template name="heartballoons">
+  <div class="container">
+    {{> reactiveTable collection=heartballoons settings=settings}}
+  </div>
   
-  {{> reactiveTable collection=heartballoons settings=settings}}
+  {{> yield region='charges'}}
 </template>

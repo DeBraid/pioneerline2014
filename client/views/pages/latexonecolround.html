@@ -1,5 +1,9 @@
 <template name="latexonecolround">
   
-      {{> reactiveTable collection=latexonecolround settings=settings}}
+  <div class="container">
+    {{> reactiveTable collection=latexonecolround settings=settings}}
+  </div>
+  
+  {{> yield region='charges'}}
         
 </template>

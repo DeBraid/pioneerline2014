@@ -1,4 +1,8 @@
 <template name="roundballoons">
-  {{> reactiveTable collection=roundballoons settings=settings}}
 
+  <div class="container">
+    {{> reactiveTable collection=roundballoons settings=settings}}
+  </div>
+  
+  {{> yield region='charges'}}
 </template>

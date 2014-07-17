@@ -1,5 +1,8 @@
 <template name="adwrap">
+  <div class="container">
+    {{> reactiveTable collection=adwrap settings=settings}}
+  </div>
   
-      {{> reactiveTable collection=adwrap settings=settings}}
+  {{> yield region='charges'}}
   
 </template>

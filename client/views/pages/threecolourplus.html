@@ -1,4 +1,7 @@
 <template name="threecolourplus">
+  <div class="container">
+    {{> reactiveTable collection=threecolourplus settings=settings}}
+  </div>
   
-  {{> reactiveTable collection=threecolourplus settings=settings}}
+  {{> yield region='charges'}}
 </template>

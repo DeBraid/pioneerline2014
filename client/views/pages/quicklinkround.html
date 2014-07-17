@@ -1,5 +1,7 @@
 <template name="quicklinkround">
+  <div class="container">
+    {{> reactiveTable collection=quicklinkround settings=settings}}
+  </div>
   
-      {{> reactiveTable collection=quicklinkround settings=settings}}
-  
+  {{> yield region='charges'}}  
 </template>
