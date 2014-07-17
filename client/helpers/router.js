@@ -12,6 +12,7 @@ Router.configure({
   layoutTemplate: 'layout',
   loadingTemplate: 'loading',
   notFoundTemplate: 'notFound',
+  charges: 'charges',
 });
 
 // Filters
@@ -72,12 +73,17 @@ Router.map(function() {
   this.route('adwave', {
     path: '/adwave',
     template: 'adwave',
+    yieldTemplates: {
+      'charges': {to: 'charges'}
+    }, 
     waitOn: function () {
-      return Meteor.subscribe('adwave');
+      return [Meteor.subscribe('adwave'),
+              Meteor.subscribe('charges')];
     },
     data: function () {
       return {
-        adwave: Adwave.find()
+        adwave: Adwave.find(),
+        charges: Charges.find()
       }
     }
   });
@@ -173,6 +179,19 @@ Router.map(function() {
     data: function () {
       return {
         adwrap: Adwrap.find()
+      }
+    }
+  });
+
+  this.route('charges', {
+    path: '/charges',
+    template: 'charges',
+    waitOn: function () {
+      return Meteor.subscribe('charges');
+    },
+    data: function () {
+      return {
+        charges: Charges.find()
       }
     }
   });

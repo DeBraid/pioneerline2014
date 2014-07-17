@@ -44,6 +44,10 @@ Meteor.publish('twocolourballoons', function() {
   return Twocolourballoons.find();
 });
 
+Meteor.publish('charges', function() {
+  return Charges.find();
+});
+
 
 // Publish a single item
 

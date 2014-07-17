@@ -1,5 +1,5 @@
 <template name="adwave">
-  
-      {{> reactiveTable collection=adwave settings=settings}}
-  
+    
+    {{> yield region='charges' }}
+    {{> reactiveTable collection=adwave settings=settings}}  
 </template>
