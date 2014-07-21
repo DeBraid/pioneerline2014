@@ -1,9 +1,45 @@
-Template.roundballoons.helpers({
-    settings: function () {
+Template.roundballoons.settings = function () {
         return {
-            rowsPerPage: 10,
             showFilter: true,
-            fields: ['Product Description','250','500','1000','2500','5000','10000','25000','PSD']
+            fields: [{
+                            key: 'Product Description',
+                            label: 'Product',
+                            fn: function (name, object) {
+                                var html = '<a name="' + name + '" href="product/' + object._id + '">' + name + '</a>';
+                                return new Spacebars.SafeString(html);
+                            }
+                        }, {
+                            key: '250',
+                            label: '250'
+                        }, {
+                            key: '500',
+                            label: '500'
+                        }, {
+                            key: '1000',
+                            label: '1000'
+                        }, {
+                            key: '2500',
+                            label: '2500'
+                        }, {
+                            key: '5000',
+                            label: '5000'
+                        }, {
+                            key: '10000',
+                            label: '10000'
+                        }, {
+                            key: '25000',
+                            label: '25000'
+                        },{
+                            key: 'PSD',
+                            label: 'Image',
+                            fn: function (name, object) {
+                              var html = '<div class="thumbnail" style="width:100px;">' + 
+                                            '<img src="' + object.PSD.slice(0,-4) + '.jpg' + '">' + 
+                                        '</div>';
+                              return new Spacebars.SafeString(html);
+                            }
+                        }
+                    ]
         };
-    }
-});
+    };
+

@@ -1,30 +1,9 @@
-<template name="productsList">
-  <h2>Description: </h2>
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <td>Product Description</td>
-        <td>1000</td>
-        <td>2500</td>
-        <td>5000</td>
-        <td>10000</td>
-        <td>25000</td>
-        <td>Picture</td>
-      </thead>
-      <tbody>
-      {{#each adwave }}
-      <tr>
-        <td>{{ description }}</td>
-        <!-- <td>{{ 1000 }}</td>
-        <td>{{ 2500 }}</td>
-        <td>{{ 5000 }}</td>
-        <td>{{ 10000 }}</td>
-        <td>{{ 25000 }}</td> -->
-        <td>{{ PSD }}</td>
-      </tr>
-      {{/each}}
-      </tbody> 
-    </table>
-    <h1>rocking in free world</h1>
-</div>
+<template name="product">
+    
+  {{#each product }}
+    <h1>{{ Product Description }}</h1>
+    
+  {{/each }}
+
+  <h1></h1>
 </template>

@@ -62,7 +62,18 @@ Router.map(function() {
     }
   });
 
-
+  this.route('product', {
+    path: '/product/:_id',
+    template: 'product',
+    waitOn: function () {
+      return Meteor.subscribe('singleProduct', this.params._id);
+    },
+    data: function () {
+      return {
+        product: Session.get(this.params._id)
+      }
+    }
+  });
   // Pages
 
   this.route('homepage', {

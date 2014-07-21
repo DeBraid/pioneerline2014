@@ -1,9 +1,26 @@
-Template.quicklinkround.helpers({
-    settings: function () {
-        return {
-            rowsPerPage: 10,
-            showFilter: true,
-            fields: ['Product Description','Printing','200','500','1000','PSD']
-        };
-    }
-});
+Template.quicklinkround.settings = function () {
+    return {
+        showFilter: true,
+        fields: [{
+                  key: 'Product Description',
+                  label: 'Product',
+                  fn: function (name, object) {
+                      var html = '<a name="' + name + '" href="product/' + object._id + '">' + name + '</a>';
+                      return new Spacebars.SafeString(html);
+                  }
+                }, {
+                    key: 'Printing',
+                    label: 'Printing'
+                }, {
+                    key: '200',
+                    label: '200'
+                }, {
+                    key: '500',
+                    label: '500'
+                }, {
+                    key: '1000',
+                    label: '1000'
+                }
+            ]
+    };
+};
