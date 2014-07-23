@@ -2,3 +2,107 @@ footer,
 #charges {
   font-size: 0.7em;
 }
+
+
+/*********************************************************************************/
+/* NAVBAR                                                                        */
+/*********************************************************************************/
+.navbar {
+  background-color: #ffdf00;
+}
+
+.navbar a {
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+
+body > nav > div > div.navbar-header > a {
+  color: #009ae2;
+}
+
+/*.collapse a {
+  color: #0072bb; 
+}
+*/
+#navbar-collapse > ul > li > a {
+  color: #0072bb; 
+}
+
+#navbar-collapse > ul > li > a:hover {
+  color: #009ae2;
+  background-color: #f99621;
+}
+
+
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+header
+{
+  margin-bottom: 1em;
+}
+
+  header p
+  {
+    display: block;
+    margin: 0.5em 0 0 0;
+    padding: 0 0 1.5em 0;
+  }
+
+  #header
+  {
+    position: relative;
+    color: #252175;
+    text-shadow: 0 0 0.5px rgba(255,255,255,0.25);
+    text-align: center;
+    margin: 0;
+    padding: 7em 0 7em 0;
+    cursor: default;
+  }
+
+  #header #logo {
+    width: 80%;
+  }
+    #header span { color: #009ae2 }
+
+    #header span#two { color: #f99621 }
+    #header span#zero { color: #ffdf00 }
+    #header span#one { color: #82c13f }
+    #header span#four { color: #0072bb }
+    
+    #header header
+    {
+      display: inline-block;
+      padding: 1.0em 1.0em 2.5em 1.0em;
+      background-color: white;
+      border-radius: 50px;
+    }
+    
+      #header header h1
+      {
+        font-weight: 600;
+        font-size: 2em;
+        letter-spacing: 10px;
+      }
+
+      #header header p
+      {
+        border-top: solid 1px rgba(255,255,255,0.5);
+        color: rgba(255,255,255,0.75);
+        text-shadow: 0 0 0.5px rgba(255,255,255,0.1875);
+        font-size: 1em;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding: 0;
+        margin-top: 0.35em;
+      }
+      
+        #header header p:before
+        {
+          content: '';
+          display: block;
+          border-top: solid 1px rgba(255,255,255,0.5);
+          margin: 4px 0 0.8em 0;
+        }
