@@ -1,9 +1,3 @@
-footer,
-#charges {
-  font-size: 0.7em;
-}
-
-
 /*********************************************************************************/
 /* NAVBAR                                                                        */
 /*********************************************************************************/
@@ -115,3 +109,41 @@ header
           border-top: solid 1px rgba(255,255,255,0.5);
           margin: 4px 0 0.8em 0;
         }
+
+
+/*********************************************************************************/
+/* CODES                                                                        */
+/*********************************************************************************/
+#codes {
+  float: right;
+}
+
+/*********************************************************************************/
+/* GLOBAL TEXT                                                             */
+/*********************************************************************************/
+.contact-text {
+  color: #0072bb;
+  text-shadow: 0 0 0.5px rgba(255,255,255,0.15);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+#codes, 
+.footer,
+#charges {
+  color: #0072bb;
+  text-shadow: 0 0 0.5px rgba(255,255,255,0.15);
+  font-size: 0.7em;
+}
+
+/*.form-control:focus, .form-control:focus + span .btn{
+    border-color:#ffdf00;
+    box-shadow:none;
+}*/
+
+.form-control:focus {
+  border-color: #ffdf00;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(255,223,0, 0.5), 0 0 8px rgba(255,223,0, 0.2);
+          box-shadow: inset 0 1px 1px rgba(255,223,0, 0.5), 0 0 8px rgba(255,223,0, 0.2);
+}
