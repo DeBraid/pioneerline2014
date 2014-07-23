@@ -1,31 +1,61 @@
 <template name="contact">
 
-  <div class="container">
-    <div class="row contact-text">
+    <div id="contact-container">
+        <div class="row contact-text">
+            <div class="container">
 
-     <fieldset>
-        <legend class="contact-text">Contact Us</legend>      
-        <div class="row">
+                <div class="col-md-3">
+                    <!-- placeholder for grid -->
+                </div>
+                <div class="col-md-6">
 
-          <div class="col-md-6">
-        
-            <div class="form-group">
-              {{text_field 'name'}}
+                    <fieldset>
+                        <legend class="contact-text">Contact Form</legend>
+                        <div class="row">
+                            <div class="form-group">
+                                {{text_field 'name'}}
+                            </div>
+                            <div class="form-group">
+                                {{text_field 'email' label='Email' required='required'}}
+                            </div>
+                            <div class="form-group">
+                                {{text_field 'telephone' }}
+                            </div>
+                            <div class="form-group">
+                                {{text_area 'message' }}
+                            </div>
+                            <p><button href="#" class="btn btn-success btn-block">SUBMIT</button></p>
+                        </div>
+                    </fieldset>
+
+                    <hr>
+
+
+                    <section>
+                        <h4>Phone: 905-888-9999</h4>
+                        <h4>Email: pioneerline@email.com</h4>
+
+                        <p>
+                            100 King St.
+                            <br>Hamilton, ON
+                            <br>L8G 2G5
+                            <br>
+                        </p>
+
+                    </section>
+
+
+
+
+                </div>
+                <div class="col-md-3">
+                    <!-- placeholder for grid -->
+                </div>
+
+
             </div>
-            <div class="form-group">
-              {{text_field 'email' label='Email' required='required'}}
-            </div>
-            <div class="form-group">
-              {{text_field 'telephone'}}
-            </div>
-            <div class="form-group">
-              {{text_area 'message'}}
-            </div>
-          </div>
+
         </div>
-      </fieldset>
-     
-    </div>
-  </div>
-  
+      </div>
+
 </template>
