@@ -8,7 +8,14 @@ Template.nav.helpers({
 })
 
 Template.nav.events({
-  'click .log-out': function () {
-    Meteor.logout();
+  'click .dropdown-menu, .navbar-collapse a': function () {
+      
+    var myNav = $('.navbar-header .navbar-toggle');
+
+    if ( myNav.css('display') !='none' ) {
+        
+        myNav.trigger( 'click' );
+
+    }
   }
 })

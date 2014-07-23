@@ -14,4 +14,3 @@ Template.footer.rendered = function () {
         $('footer').css( 'margin-top', height_diff );
     }
 };
-
