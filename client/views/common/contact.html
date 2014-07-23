@@ -1,4 +1,26 @@
 <template name="contact">
-  <h2>Email: foobar@email.com</h2>
-  <h3>Phone: 905-110-4567</h3>
+  <article id="contact" class="container box style3">
+    <header>
+      <h2>Contact Us</h2>
+      <p>We can help arrange your orders and provide custom designs.</p>
+    </header>
+    <form>
+      <div class="row half">
+        <div class="6u"><input type="text" class="text" name="name" placeholder="Name" /></div>
+        <div class="6u"><input type="text" class="text" name="email" placeholder="Email" /></div>
+      </div>
+      <div class="row half">
+        <div class="12u">
+          <textarea name="message" placeholder="Message"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="12u">
+          <ul class="actions">
+            <li><a href="#" class="button form">Send Message</a></li>
+          </ul>
+        </div>
+      </div>
+    </form>
+  </article>
 </template>

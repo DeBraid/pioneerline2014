@@ -30,8 +30,12 @@ body > nav > div > div.navbar-header > a {
 }
 
 #navbar-collapse > ul > li > a:hover {
-  color: #009ae2;
-  background-color: #f99621;
+  color: #f99621;
+  background-color: #0072bb;
+}
+
+.dropdown-menu {
+  background-color: #82c13f;
 }
 
 
