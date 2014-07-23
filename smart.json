@@ -3,6 +3,8 @@
   "packages": {
     "iron-router": {},
     "bootstrap-3": {},
-    "reactive-table": {}
+    "reactive-table": {},
+    "font-awesome": {},
+    "simple-form": {}
   }
 }

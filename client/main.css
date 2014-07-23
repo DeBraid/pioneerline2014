@@ -34,6 +34,11 @@ body > nav > div > div.navbar-header > a {
   background-color: #0072bb;
 }
 
+#navbar-collapse > ul:nth-child(n) > li.dropdown.open {
+  color: #f99621;
+  background-color: #0072bb;
+}
+
 .dropdown-menu {
   background-color: #82c13f;
 }
