@@ -36,8 +36,10 @@ Template.heartballoons.settings = function () {
                     key: 'PSD',
                     label: 'Image',
                     fn: function (name, object) {
-                      var html = '<img src="' + object.PSD + '">';
-                      return new Spacebars.SafeString(html);
+                     var html = '<div class="thumbnail" style="height:150px;width:60px;">' + 
+                                            '<img src="' + object.PSD.slice(0,-4) + '.jpg' + '">' + 
+                                        '</div>';
+                              return new Spacebars.SafeString(html);
                     }
                 }
             ]
