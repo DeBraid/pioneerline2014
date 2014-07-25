@@ -10,7 +10,6 @@ Template.adwave.helpers({
                             fn: function (name, object) {
                                 var image = object.PSD.slice(0,-4);
                         
-
                                 var html = '<a name="' + name + '" href="product/' + object._id + '">' + name + '</a>' + 
                                         '<div class="thumbnail tableimages">' + 
                                             '<img src="' + image + '.jpg' + '">' + 
