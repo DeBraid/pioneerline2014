@@ -5,9 +5,13 @@ Template.adwrap.settings = function () {
                   key: 'Product Description',
                   label: 'Product',
                   fn: function (name, object) {
-                      var html = '<a name="' + name + '" href="product/' + object._id + '">' + name + '</a>';
+                      var image = object.PSD.slice(0,-4);
+                      var html = '<a name="' + name + '" href="product/' + object._id + '">' + name + '</a>' + 
+                              '<div class="thumbnail tableimages">' + 
+                                  '<img src="' + image + '.jpg' + '">' + 
+                              '</div>';
                       return new Spacebars.SafeString(html);
-                  }
+                    }
                 }, {
                     key: '1000',
                     label: '1000'
@@ -23,21 +27,6 @@ Template.adwrap.settings = function () {
                 }, {
                     key: '25000',
                     label: '25000'
-                }, {
-                    key: 'PSD',
-                    label: 'Image',
-                    fn: function (name, object) {
-                      var image = object.PSD.toString();
-                      if ( image == "AdWrapStockAware.psd" ) {
-                        console.log("we hit na image **");
-                      }
-                      
-
-                     var html = '<div class="thumbnail tableimages">' + 
-                                            '<img src="' + image.slice(0,-4) + '.jpg' + '">' + 
-                                        '</div>';
-                              return new Spacebars.SafeString(html);
-                    }
                 }
             ]
     };

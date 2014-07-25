@@ -1,47 +1,44 @@
 Template.heartballoons.settings = function () {
-    return {
+        return {
         showFilter: true,
         fields: [{
-                    key: 'ItemNum',
-                    label: 'Item #'
-                },{
-                    key: 'Product Description',
-                    label: 'Product',
-                    fn: function (name, object) {
-                      var html = '<a name="' + name + '" href="product/' + object._id + '">' + name + '</a>';
-                      return new Spacebars.SafeString(html);
+                        key: 'Product Description',
+                        label: 'Product',
+                        fn: function (name, object) {
+                            var image = object.PSD.slice(0,-4);
+                    
+
+                            var html = '<a name="' + name + '" href="product/' + object._id + '">' + name + '</a>' + 
+                                    '<div class="thumbnail tableimages">' + 
+                                        '<img src="' + image + '.jpg' + '">' + 
+                                    '</div>';
+                            return new Spacebars.SafeString(html);
+                        }
+                    },{
+                        key: 'ItemNum',
+                        label: 'Item #'
+                    }, {
+                        key: '250',
+                        label: '250'
+                    }, {
+                        key: '500',
+                        label: '500'
+                    }, {
+                        key: '1000',
+                        label: '1000'
+                    }, {
+                        key: '2500',
+                        label: '2500'
+                    }, {
+                        key: '5000',
+                        label: '5000'
+                    }, {
+                        key: '10000',
+                        label: '10000'
+                    }, {
+                        key: '25000',
+                        label: '25000'
                     }
-                }, {
-                    key: '250',
-                    label: '250'
-                }, {
-                    key: '500',
-                    label: '500'
-                }, {
-                    key: '1000',
-                    label: '1000'
-                }, {
-                    key: '2500',
-                    label: '2500'
-                }, {
-                    key: '5000',
-                    label: '5000'
-                }, {
-                    key: '10000',
-                    label: '10000'
-                }, {
-                    key: '25000',
-                    label: '25000'
-                }, {
-                    key: 'PSD',
-                    label: 'Image',
-                    fn: function (name, object) {
-                     var html = '<div class="thumbnail tableimages">' + 
-                                            '<img src="' + object.PSD.slice(0,-4) + '.jpg' + '">' + 
-                                        '</div>';
-                              return new Spacebars.SafeString(html);
-                    }
-                }
-            ]
+                ]
     };
 };

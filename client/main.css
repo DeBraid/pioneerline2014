@@ -3,17 +3,25 @@
 /*********************************************************************************/
 .tableimages {
   max-height:150px;
-  width:120px;
+  width:140px;
   overflow: hidden;
 }
 /* headings */
 .reactive-table .sortable {
-  color: #f99621;
+  color: #0072bb;
 }
 
 /* data inside the table */
 #table-container {
-  color: #f99621;
+  color: #0072bb;
+}
+
+table {
+  border-color: red;
+}
+
+.thumbnail {
+  margin-bottom: 0;
 }
 /*********************************************************************************/
 /* NAVBAR                                                                        */
