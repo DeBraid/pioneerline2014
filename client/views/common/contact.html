@@ -10,21 +10,35 @@
                 <div class="col-md-6">
 
                     <fieldset>
-                        <legend class="contact-text">Contact Form</legend>
+                        <legend class="contact-text"><h1>Contact Form</h1></legend>
                         <div class="row">
-                            <div class="form-group">
-                                {{text_field 'name'}}
+                            <div class="col-md-12">
+
+                                <div class="form-group">
+                                    {{text_field 'name'}}
+                                </div>
+                                
                             </div>
-                            <div class="form-group">
-                                {{text_field 'email' label='Email' required='required'}}
+
+                            <div class="col-md-12">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        {{text_field 'email' label='Email' required='required'}}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        {{text_field 'telephone' }}
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                {{text_field 'telephone' }}
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    {{text_area 'message' }}
+                                </div>
+                                <p><button href="#" class="btn btn-success btn-block">SUBMIT</button></p>    
                             </div>
-                            <div class="form-group">
-                                {{text_area 'message' }}
-                            </div>
-                            <p><button href="#" class="btn btn-success btn-block">SUBMIT</button></p>
                         </div>
                     </fieldset>
 
@@ -32,15 +46,19 @@
 
 
                     <section>
-                        <h4>Phone: 905-888-9999</h4>
-                        <h4>Email: orders.canada@pioneerballoon.com</h4>
-
-                        <p>333 Kenora Ave  <br>
-                        Hamilton, ON  <br>
-                        L8E 2W3 <br>
-                        Pioneer Balloon Canada Ltd
-                        </p>
-
+                        <h3>Pioneer Balloon Canada Ltd </h3>
+                        <div>
+                            <h4>905-888-9999</h4>
+                            <h4>orders.canada@pioneerballoon.com</h4>
+                        </div>
+                        <div>
+                            
+                            <p>333 Kenora Ave  <br>
+                            Hamilton, ON  <br>
+                            L8E 2W3 
+                            
+                            </p>
+                        </div>
                     </section>
 
 
