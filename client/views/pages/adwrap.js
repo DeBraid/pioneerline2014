@@ -23,6 +23,21 @@ Template.adwrap.settings = function () {
                 }, {
                     key: '25000',
                     label: '25000'
+                }, {
+                    key: 'PSD',
+                    label: 'Image',
+                    fn: function (name, object) {
+                      var image = object.PSD.toString();
+                      if ( image == "AdWrapStockAware.psd" ) {
+                        console.log("we hit na image **");
+                      }
+                      
+
+                     var html = '<div class="thumbnail tableimages">' + 
+                                            '<img src="' + image.slice(0,-4) + '.jpg' + '">' + 
+                                        '</div>';
+                              return new Spacebars.SafeString(html);
+                    }
                 }
             ]
     };

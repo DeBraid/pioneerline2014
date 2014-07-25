@@ -29,11 +29,11 @@ Template.roundballoons.settings = function () {
                         }, {
                             key: '25000',
                             label: '25000'
-                        },{
+                        }, {
                             key: 'PSD',
                             label: 'Image',
                             fn: function (name, object) {
-                              var html = '<div class="thumbnail" style="height:150px;width:60px;">' + 
+                              var html = '<div class="thumbnail tableimages">' + 
                                             '<img src="' + object.PSD.slice(0,-4) + '.jpg' + '">' + 
                                         '</div>';
                               return new Spacebars.SafeString(html);
