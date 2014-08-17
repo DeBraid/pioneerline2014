@@ -8,6 +8,8 @@ Template.nav.helpers({
 })
 
 Template.nav.events({
+
+  // Fix for mobile nav bar staying when switching routes
   'click .dropdown-menu, .navbar-collapse a': function () {
       
     var myNav = $('.navbar-header .navbar-toggle');
@@ -17,5 +19,8 @@ Template.nav.events({
         myNav.trigger( 'click' );
 
     }
-  }
-})
+  },
+  'click #contact-button' : function() {
+    $('.collapse.in').collapse('hide');
+  },
+});

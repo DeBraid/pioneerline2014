@@ -1,46 +1,56 @@
 <template name="contact">
 
-    <div id="contact-container">
-        <div class="row contact-text">
-            <div class="container">
+<div class="row row-centered">
+  <div class="col-xs-12 col-centered">
+    <h3 class="text-center">Contact</h3>
+  </div>
+  {{#if formSubmitted}}
+    <!-- Successful Submission Message -->
+    <div class="col-xs-12 col-centered">
+      <div class="alert alert-success">
+        <strong>
+          <span class="fa fa-envelope"></span>
+          Success! Message Sent!
+        </strong>
+      </div>
+    </div>
+  {{else}}
+    {{#if formError}}
+      <!-- Display Error Message -->
+      <div class="col-xs-12 col-centered">
+        <div class="alert alert-danger">
+          <strong>
+            <span class="fa fa-warning"></span>
+            Error! Please check your inputs!
+          </strong>
+        </div>
+      </div>
+    {{/if}}
+    <!-- Start Contact Form -->
+    <form role="form" method="POST">
+    <div class="col-xs-12 col-md-8 col-lg-6 col-centered">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Name" pattern="[a-zA-Z]+" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" name="email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="phone" class="form-control" name="phone" placeholder="Phone" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+      </div>
+      <button type="submit" name="submit" class="btn btn-info btn-lg pull-right">Submit</button>
+    </div>
+  </form>
+  {{/if}}
+</div>
 
-                <div class="col-md-3">
-                    <!-- placeholder for grid -->
-                </div>
-                <div class="col-md-6">
-
-                    <fieldset>
-                        <legend class="contact-text"><h1>Contact Form</h1></legend>
-                        <div class="row">
-                            <div class="col-md-12">
-
-                                <div class="form-group">
-                                    {{text_field 'name'}}
-                                </div>
-                                
-                            </div>
-
-                            <div class="col-md-12">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        {{text_field 'email' label='Email' required='required'}}
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        {{text_field 'telephone' }}
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    {{text_area 'message' }}
-                                </div>
-                                <p><button href="#" class="btn btn-success btn-block">SUBMIT</button></p>    
-                            </div>
-                        </div>
-                    </fieldset>
 
                     <hr>
 
@@ -48,31 +58,12 @@
                     <section>
                         <h3>Pioneer Balloon Canada Ltd </h3>
                         <div>
-                            <h4>905-888-9999</h4>
+                            <h4>1-800-263-6861</h4>
                             <h4>orders.canada@pioneerballoon.com</h4>
-                        </div>
-                        <div>
-                            
-                            <p>333 Kenora Ave  <br>
-                            Hamilton, ON  <br>
-                            L8E 2W3 
-                            
-                            </p>
                         </div>
                     </section>
 
 
 
-
-                </div>
-                <div class="col-md-3">
-                    <!-- placeholder for grid -->
-                </div>
-
-
-            </div>
-
-        </div>
-      </div>
 
 </template>

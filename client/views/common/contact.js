@@ -1,33 +1,96 @@
+// Set the document title for SEO
+Template.contact.rendered = function(){
+  document.title = 'Contact';
+  $('form').bootstrapValidator({
+      message: 'This value is not valid',
+      feedbackIcons: {
+        valid: 'glyphicon glyphicon-ok',
+        invalid: 'glyphicon glyphicon-remove',
+        validating: 'glyphicon glyphicon-refresh'
+      },
+      fields: {
+        name: {
+          validators: {
+            notEmpty: {
+              message: 'Name is required'
+            },
+            stringLength: {
+              min: 2,
+              message: 'Your name is probably more than 1 character long'
+            }
+          }
+        },
+        email: {
+          validators: {
+            notEmpty: {
+              message: 'Email is required'
+            },
+            emailAddress: {
+              message: 'Not a valid email address'
+            }
+          }
+        },
+        phone: {
+          validators: {
+            notEmpty: {
+              message: 'Phone # required'
+            },
+            stringLength: {
+              min: 9,
+              message: 'Your phone is probably more than 8 character long'
+            }
+          }
+        },
+        message: {
+          validators: {
+            notEmpty: {
+              message: 'Message is required'
+            },
+            stringLength: {
+              max: 300,
+              message: 'Your message must be less than 300 characters long'
+            }
+          }
+        }
+      }
+  });
+};
+
+// Setup the submit event
 Template.contact.events({
-  'click #submitContact' : function(event, template) {
+  'success.form.bv form' : function(event, template) {
+    console.log('clicked submit');
+    $('button[type=submit]').prop('disabled',true);
     event.preventDefault();
-
-    fullname = template.find("input[name=fullname]");
-    telephone = template.find("input[name=telephone]");   
-    email = template.find("input[name=email]");
-    message = template.find("input[name=message]");
-
-    // Do form validation
-
+    // Grab the data
+    var name = template.find('input[name=name]').value;
+    var email = template.find('input[name=email]').value;
+    var phone = template.find('input[name=phone]').value;
+    var message = template.find('textarea[name=message]').value;
     var data = {
-      fullname: fullname.value,
-      telephone: telephone.value,
-      email: email.value, 
-      message: message.value
+      name: name,
+      email: email,
+      phone: phone,
+      message: message
     };
-
-    email.value="";
-    fullname.value="";
-    telephone.value="";
-    message.value="";
-
-    ContactMsg.insert(data, function(err) { 
-    /* handle error */ 
-      if (!err) { 
-        console.log("Successfully Inserted: " + data + "into ContactMsg")
+    // Call server function to send the data to be emailed
+    Meteor.call('sendMyEmail', data, function (err){
+      if (err) {
+        // Something went wrong :(
+        Session.set('formError', true);
+        $('button[type=submit]').prop('disabled',false);
       } else {
-        console.log(err);
+        // Let them know it was submitted
+        Session.set('formSubmitted', true);
       }
     });
+  }
+});
 
-}});
+Template.contact.formSubmitted = function() {
+  return Session.get('formSubmitted');
+};
+
+Template.contact.formError = function() {
+  return Session.get('formError');
+};

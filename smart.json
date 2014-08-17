@@ -5,6 +5,7 @@
     "bootstrap-3": {},
     "reactive-table": {},
     "font-awesome": {},
-    "simple-form": {}
+    "simple-form": {},
+    "spin": {}
   }
 }

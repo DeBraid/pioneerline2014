@@ -49,8 +49,7 @@ Meteor.publish('charges', function() {
 });
 
 
-// Publish a single item
-
-Meteor.publish('singleItem', function(id) {
-  return Items.find(id);
-});
+// // Publish a single item
+// Meteor.publish('singleItem', function(id) {
+//   return Items.find(id);
+// });
