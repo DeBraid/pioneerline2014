@@ -37,44 +37,6 @@ Router.onBeforeAction(filters.myFilter, {only: ['items']});
 
 Router.map(function() {
 
-  // Items
-
-  // this.route('items', {
-  //   waitOn: function () {
-  //     return Meteor.subscribe('allItems');
-  //   },
-  //   data: function () {
-  //     return {
-  //       items: Items.find()
-  //     }
-  //   }
-  // });
-
-  // this.route('item', {
-  //   path: '/items/:_id',
-  //   waitOn: function () {
-  //     return Meteor.subscribe('singleItem', this.params._id);
-  //   },
-  //   data: function () {
-  //     return {
-  //       item: Items.findOne(this.params._id)
-  //     }
-  //   }
-  // });
-
-  // this.route('product', {
-  //   path: '/product/:_id',
-  //   template: 'product',
-  //   waitOn: function () {
-  //     return Meteor.subscribe('singleProduct', this.params._id);
-  //   },
-  //   data: function () {
-  //     return {
-  //       product: Session.get(this.params._id)
-  //     }
-  //   }
-  // });
-  // Pages
 
   this.route('homepage', {
     path: '/'
@@ -219,6 +181,24 @@ Router.map(function() {
     data: function () {
       return {
         adwrap: Adwrap.find(),
+        charges: Charges.find()
+      }
+    }
+  });
+
+  this.route('giantlatexballoons', {
+    path: '/giantlatexballoons',
+    template: 'giantlatexballoons',
+    yieldTemplates: {
+      'charges': {to: 'charges'}
+    }, 
+    waitOn: function () {
+      return [Meteor.subscribe('giantlatexballoons'),
+              Meteor.subscribe('charges')];
+    },
+    data: function () {
+      return {
+        giantlatexballoons: Giantlatexballoons.find(),
         charges: Charges.find()
       }
     }
