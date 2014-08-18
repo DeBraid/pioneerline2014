@@ -12,6 +12,11 @@ Meteor.publish('allItems', function() {
   return Items.find();
 });
 
+Meteor.publish('giantlatexballoons', function() {
+  return Giantlatexballoons.find();
+});
+
+
 Meteor.publish('adwave', function() {
   return Adwave.find();
 });
