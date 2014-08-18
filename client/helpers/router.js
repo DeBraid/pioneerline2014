@@ -212,29 +212,13 @@ Router.map(function() {
     }, 
     waitOn: function () {
       return [Meteor.subscribe('cloudbuster'),
+              Meteor.subscribe('cloudbusterkits'),
               Meteor.subscribe('charges')];
     },
     data: function () {
       return {
         cloudbuster: Cloudbuster.find(),
-        charges: Charges.find()
-      }
-    }
-  });
-
-  this.route('adbusterballoons', {
-    path: '/adbusterballoons',
-    template: 'adbusterballoons',
-    yieldTemplates: {
-      'charges': {to: 'charges'}
-    }, 
-    waitOn: function () {
-      return [Meteor.subscribe('adbusterballoons'),
-              Meteor.subscribe('charges')];
-    },
-    data: function () {
-      return {
-        adbusterballoons: Adbusterballoons.find(),
+        cloudbusterkits: Cloudbusterkits.find(),
         charges: Charges.find()
       }
     }

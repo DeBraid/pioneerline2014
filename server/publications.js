@@ -24,6 +24,10 @@ Meteor.publish('cloudbuster', function() {
   return Cloudbuster.find();
 });
 
+Meteor.publish('cloudbusterkits', function() {
+  return Cloudbusterkits.find();
+});
+
 Meteor.publish('adbusterballoons', function() {
   return Adbusterballoons.find();
 });
