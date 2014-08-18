@@ -28,6 +28,11 @@ Meteor.publish('cloudbusterkits', function() {
   return Cloudbusterkits.find();
 });
 
+Meteor.publish('outdoorballoons', function() {
+  return Outdoorballoons.find();
+});
+
+
 Meteor.publish('adbusterballoons', function() {
   return Adbusterballoons.find();
 });

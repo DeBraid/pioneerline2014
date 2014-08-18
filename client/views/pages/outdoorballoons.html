@@ -1,0 +1,36 @@
+<template name="outdoorballoons">
+  <div class="row">
+    <h1>17” Outdoor Display Balloons</h1>
+
+    <p>17” Outdoor Display Balloons are manufactured to professional standards and engineered for outdoor use. The thick-wall design provides a flying time of 35-50 hours depending on atmospheric conditions.</p>
+  </div>
+  
+  <div class="row">
+    {{> reactiveTable collection=outdoorballoons settings=settings}}
+  </div>
+
+  <div class="row">
+    <h3>Screen Printing: prices include valved balloons with one-side screen imprint; add additional charges.</h3>
+    <ul>
+      <li><strong>Screen Charge:</strong> $100.00(A) per imprint & colour.  No charge for second-side screen(s) if using same art.</li>
+      <li><strong>Photo Screen Charge:</strong> $36.00(A) per imprint.</li>
+      <li><strong>Second-Side Imprint:</strong>  18" & 20" balloons - $.44(A) per balloon; 36" balloons - $3.00(A) per balloon.  See above for applicable screen charges.</li>
+      <li><strong>Second-Side Imprint (multi-colour):</strong> 250 piece minimum.</li>
+        <ul>
+          <li>For 18" & 20" balloons: For same print second side:  $.50(A) per colour, per piece.</li>
+          <li>For different print second side:  $.60(A) per colour, per piece. See above for applicable screen charges.</li>
+        </ul>
+      <li><strong>Custom Ink Blend:</strong> $90.00(A) per colour, custom ink blends are not inventoried.
+        <ul>
+          <li>**Exact PMS colour matches cannot be guaranteed**</li>
+        </ul>
+      </li>
+      <li><strong>Art Charge</strong> $50.00(A) per hour.</li>
+    </ul>
+  </div>
+  
+  <div class="row">
+    {{> yield region='charges'}}
+  </div>
+  
+</template>

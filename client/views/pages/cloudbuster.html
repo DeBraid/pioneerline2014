@@ -1,13 +1,48 @@
 <template name="cloudbuster">
-  
-  <div class="container">
-    {{> reactiveTable collection=cloudbuster settings=settings}}
-  </div>
+    <div class="container">
 
-  <div class="container">
-    {{> reactiveTable collection=cloudbusterkits settings=settings}}
-  </div>
+        <div class="row">
+            <h1>Cloudbuster ™ Balloons & Kits</h1>
 
-  {{> yield region='charges'}}
-  
+            <p>Cloudbuster Chloroprene Balloons are manufactured to professional standards. The raw materials used in producing these balloons help retard the sun’s ultraviolet rays, while the slender neck makes inflation easy.</p>
+        </div>
+
+        <div class="row">
+            <h3>Cloudbuster Chloroprene Balloons</h3>
+            {{> reactiveTable collection=cloudbuster settings=settings}}
+        </div>
+
+        <div class="row">
+            <h3>Cloudbuster Kits</h3>
+            {{> cloudbusterkits }}
+        </div>
+
+        <div class="row">
+            <p>Cloudbuster Kits Include: One 5 ½-ft or 8-ft. Chloroprene Balloon (Select colour); 100-ft. Pennant Line and instructions. The 8-ft. Cloudbuster Kit also includes one 150-ft. spool of Heavy Nylon Tether Line.</p>
+        </div>
+
+        <div class="row">
+            <h3>Cloudbuster Accessories</h3>
+
+            <p><strong>Balloon Filling Hose</strong>- (#92106) - $71.48(A) each. Designed with a hand-tight connection, 24” hose, and built-in restricted flow to ensure quick, easy, and controlled helium inflation of Cloudbuster Chloroprene Balloons.</p>
+
+
+            <p><strong>Heavy Nylon Tether Line</strong>- (#91247) (150-ft. spool) - $19.84(A)</p>
+
+            <p><strong>Display Pennants </strong>-. (#91246) - $24.10(A) each (Assorted Colours) For use with 5 ½ and 8ft. Cloudbuster Balloons. Includes: 6” x 18” poly pennant on 100-ft. line (80 pennants per line)</p>
+
+            <h5>Standard Packaging: Cloudbuster Balloons are individually poly bagged. Kit items packaged separately.</h5>
+
+            <h5>For outdoor use!! Durable outdoor balloons float 4-18 days!!</h5>
+
+            <h4>Information:</h4>
+            <p>Because the filling and usage of any large display balloon is beyond our control, No performance or longevity guarantee can be made, Balloons should be flown clear of poles, signs, trees, ect., to prevent damage.</p>
+        </div>
+       
+
+        <div class="row">
+            {{> yield region='charges'}}
+        </div>
+
+    </div>
 </template>

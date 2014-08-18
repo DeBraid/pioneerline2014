@@ -225,6 +225,24 @@ Router.map(function() {
   });
   
 
+  this.route('outdoorballoons', {
+    path: '/outdoorballoons',
+    template: 'outdoorballoons',
+    yieldTemplates: {
+      'charges': {to: 'charges'}
+    }, 
+    waitOn: function () {
+      return [Meteor.subscribe('outdoorballoons'),
+              Meteor.subscribe('charges')];
+    },
+    data: function () {
+      return {
+        outdoorballoons: Outdoorballoons.find(),
+        charges: Charges.find()
+      }
+    }
+  });
+  
   this.route('giantlatexballoons', {
     path: '/giantlatexballoons',
     template: 'giantlatexballoons',
