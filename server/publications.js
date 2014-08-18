@@ -12,8 +12,20 @@ Meteor.publish('allItems', function() {
   return Items.find();
 });
 
+Meteor.publish('adriteeconomyline', function() {
+  return Adriteeconomyline.find();
+});
+
 Meteor.publish('giantlatexballoons', function() {
   return Giantlatexballoons.find();
+});
+
+Meteor.publish('cloudbuster', function() {
+  return Cloudbuster.find();
+});
+
+Meteor.publish('adbusterballoons', function() {
+  return Adbusterballoons.find();
 });
 
 

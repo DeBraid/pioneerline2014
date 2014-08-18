@@ -186,6 +186,61 @@ Router.map(function() {
     }
   });
 
+  this.route('adriteeconomyline', {
+    path: '/adriteeconomyline',
+    template: 'adriteeconomyline',
+    yieldTemplates: {
+      'charges': {to: 'charges'}
+    }, 
+    waitOn: function () {
+      return [Meteor.subscribe('adriteeconomyline'),
+              Meteor.subscribe('charges')];
+    },
+    data: function () {
+      return {
+        adriteeconomyline: Adriteeconomyline.find(),
+        charges: Charges.find()
+      }
+    }
+  });
+
+  this.route('cloudbuster', {
+    path: '/cloudbuster',
+    template: 'cloudbuster',
+    yieldTemplates: {
+      'charges': {to: 'charges'}
+    }, 
+    waitOn: function () {
+      return [Meteor.subscribe('cloudbuster'),
+              Meteor.subscribe('charges')];
+    },
+    data: function () {
+      return {
+        cloudbuster: Cloudbuster.find(),
+        charges: Charges.find()
+      }
+    }
+  });
+
+  this.route('adbusterballoons', {
+    path: '/adbusterballoons',
+    template: 'adbusterballoons',
+    yieldTemplates: {
+      'charges': {to: 'charges'}
+    }, 
+    waitOn: function () {
+      return [Meteor.subscribe('adbusterballoons'),
+              Meteor.subscribe('charges')];
+    },
+    data: function () {
+      return {
+        adbusterballoons: Adbusterballoons.find(),
+        charges: Charges.find()
+      }
+    }
+  });
+  
+
   this.route('giantlatexballoons', {
     path: '/giantlatexballoons',
     template: 'giantlatexballoons',
