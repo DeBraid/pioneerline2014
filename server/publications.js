@@ -32,9 +32,16 @@ Meteor.publish('outdoorballoons', function() {
   return Outdoorballoons.find();
 });
 
+Meteor.publish('microfoilvalved1820', function() {
+  return Microfoilvalved1820.find();
+});
 
-Meteor.publish('adbusterballoons', function() {
-  return Adbusterballoons.find();
+Meteor.publish('microfoilvalved36', function() {
+  return Microfoilvalved36.find();
+});
+
+Meteor.publish('largequantmicrofoil', function() {
+  return Largequantmicrofoil.find();
 });
 
 

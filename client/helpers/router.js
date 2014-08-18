@@ -242,7 +242,44 @@ Router.map(function() {
       }
     }
   });
+
+  this.route('microfoilvalved', {
+    path: '/microfoilvalved',
+    template: 'microfoilvalved1820',
+    yieldTemplates: {
+      'charges': {to: 'charges'}
+    }, 
+    waitOn: function () {
+      return [Meteor.subscribe('microfoilvalved1820'),
+              Meteor.subscribe('microfoilvalved36'),
+              Meteor.subscribe('charges')];
+    },
+    data: function () {
+      return {
+        microfoilvalved1820: Microfoilvalved1820.find(),
+        microfoilvalved36: Microfoilvalved36.find(),
+        charges: Charges.find()
+      }
+    }
+  });
   
+  this.route('largequantmicrofoil', {
+    path: '/largequantmicrofoil',
+    template: 'largequantmicrofoil',
+    yieldTemplates: {
+      'charges': {to: 'charges'}
+    }, 
+    waitOn: function () {
+      return [Meteor.subscribe('largequantmicrofoil'),
+              Meteor.subscribe('charges')];
+    },
+    data: function () {
+      return {
+        largequantmicrofoil: Largequantmicrofoil.find(),
+        charges: Charges.find()
+      }
+    }
+  });
   this.route('giantlatexballoons', {
     path: '/giantlatexballoons',
     template: 'giantlatexballoons',
