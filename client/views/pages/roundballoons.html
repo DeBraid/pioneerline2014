@@ -1,8 +1,22 @@
 <template name="roundballoons">
+  
+  <div class="row">
+    {{> roundheader}}  
+  </div>
 
-  <div id="table-container" class="container">
+  <div class="row">
     {{> reactiveTable collection=roundballoons settings=settings}}
   </div>
-  
-  {{> yield region='charges'}}
+
+  <div class="row">
+    {{> yield region='charges'}}
+  </div>
 </template>
+
+
+<template name="roundheader">
+  <h1>Latex One-Colour Print Balloons</h1>
+
+  <p>The prices below include balloons with a one-colour/two-side same Impress II® print; add additional charges</p>
+    
+</template> 

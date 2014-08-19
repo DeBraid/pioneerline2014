@@ -1,7 +1,43 @@
 <template name="heartballoons">
-  <div class="container">
-    {{> reactiveTable collection=heartballoons settings=settings}}
-  </div>
   
-  {{> yield region='charges'}}
+  <div class="container">
+    <div class="row">
+      {{> heartheader}}  
+    </div>
+
+    <div class="row">
+      {{> reactiveTable collection=heartballoons settings=settings}}
+    </div>
+    
+    <div class="row">
+      {{> heartcolours }}
+      {{> colourassortment }}
+    </div>
+    
+    <div class="row">
+      {{> yield region='charges'}}
+    </div>
+  </div>  
+
+</template>
+
+
+<template name="heartheader">
+  <h1></h1>
+
+  <p>The prices below include balloons with a one-colour/two-side same Impress II® print; add additional charges</p>
+    
+</template> 
+
+<template name="heartcolours">
+  <ul>
+    <li><strong>Heart balloons are only available in selected colours:</strong>
+      <ul>
+        <li>Standard Colours: Red (L23), White (L28), and Pink (L26)</li>
+        <li>Jewel Colours Ruby Red (L53) and Diamond Clear (L58) </li>
+        <li>Fashion Colours: Rose (L36) </li>
+      </ul>
+    </li>
+  </ul>
+
 </template>

@@ -1,7 +1,27 @@
 <template name="quicklinkround">
-  <div class="container">
+
+  <div class="row">
+    {{> qlroundheader}}  
+  </div>
+  <div class="row">
     {{> reactiveTable collection=quicklinkround settings=settings}}
   </div>
   
-  {{> yield region='charges'}}  
+
+  <div class="row">
+    {{> qlroundfooter}}
+    {{> yield region='charges'}}
+  </div>
 </template>
+
+
+<template name="qlroundheader">
+  <h1>QuickLink One-Colour Print Balloons</h1>
+
+  <h5>Round Balloons One-Colour/Two-Side Same IMPRESS II® Print</h5>
+</template> 
+
+<template name="qlroundfooter">
+  <p>The prices above include balloons with a one-colour/two-side same Impress II® print; add additional charges</p>
+</template> 
+
