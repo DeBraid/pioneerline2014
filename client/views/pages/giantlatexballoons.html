@@ -1,9 +1,37 @@
 <template name="giantlatexballoons">
   
   <div class="container">
-    {{> reactiveTable collection=giantlatexballoons settings=settings}}
+    <div class="row">
+      <h1>Giant Latex Balloons</h1>
+      {{> reactiveTable collection=giantlatexballoons settings=settings}}
+    </div>
+
+    <div class="row">
+      <p><strong>*SuperAgate Rainbow Colours include:</strong>  Blue Rainbow (L6A), Green Rainbow (L6B), Red Orange Rainbow (L6C), Yellow Orange Rainbow (L6D), and Pink Violet Rainbow (L6E)</p>
+    </div>
+    
+    <div class="row">
+      {{> yield region='charges'}}
+    </div>
   </div>
   
-  {{> yield region='charges'}}
-  
+</template>
+
+
+<template name="giantlatexcharges">
+
+  <h5>The prices above include balloons with one-colour/one-side imprint; add additional charges.</h5>
+
+  <ul>
+    <li>Cut Charge:  $50.00(A) per logo, one time only</li>
+    <li>Machine Set up charge:  $22.00(A) per order</li>
+    <li>Second-Side Imprint:  $1.00(A) per balloon</li>
+    <li>Custom Ink Blend:  $20.00(A) per ink colour; custom blends are not inventoried. 
+      <ul>
+        <li>*Exact PMS colour matches cannot be guaranteed*</li>
+      </ul>
+    </li>
+    <li>Art Charge:  $50.00(A) per hour.</li>
+  </ul>
+
 </template>

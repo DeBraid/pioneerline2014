@@ -1,6 +1,44 @@
 <template name="adwave">
-    <div class="container">
+    
+  <div class="container">
+    <div class="row">
+      <h1>AdWave® Balloons</h1>
+      <h4>Available in Two Sizes!</h4>
       {{> reactiveTable collection=adwave settings=settings}}  
     </div>
-    {{> yield region='charges'}}
+
+    <div class="row">
+      {{> adwavecolours}}
+      {{> adwaveinfo}}
+    </div>
+
+    <div class="row">
+      {{> yield region='charges'}}
+    </div>
+  </div>
+
 </template>
+
+<template name="adwavecolours">
+  <h4>AdWave balloons are available only in selected colours:</h4>  
+
+  <p><strong>Standard Colours:</strong> Pink (L26), Pale Blue (L27),White (L28), Dark Blue (L21), Green (L22), Red (L23), Yellow (L24), and Orange (L25)</p>
+
+  <p><strong>Fashion Colours:</strong>  Wintergreen (L32), Goldenrod (L34), Rose (L36), Spring Lilac (L37), Gray (L39),
+  Lime Green (L89), Onyx Black (L41), Purple Violet (L3H), Robin’s Egg Blue (L3G), Blush (L3B),
+  Mocha Brown (L3E), Chocolate Brown (L3F), Tropical Teal (L33)*, Wildberry (L3L)*, Periwinkle (L90)*</p>
+
+  <p><strong>Jewel Colours:</strong> Quartz Purple (L44), Sapphire Blue (L51), Emerald Green (L52), Ruby Red (L53), 
+  Citrine Yellow (L54), Mandarin Orange (L55), Diamond Clear (L58) and Jewel Magenta (L5C)*
+  *These colours available in 2" x 60" only.</p>
+
+  <p><strong>Art Information:</strong>  Maximum art size for the 2” x 60” is: 1”H x 10” W  Maximum art size for the 3” x 50” is: 1 ½”H x 10”W</p>
+
+</template>
+
+
+<template name="adwaveinfo">
+  <p><strong>AdWave balloons are for air inflation only, but inflation by mouth can be very difficult.</strong>  Nitrogen tanks are recommended for quick and easy inflation of AdWave balloons.  Contact your local welding supply shop for nitrogen tank rental.</p>
+
+</template>
+

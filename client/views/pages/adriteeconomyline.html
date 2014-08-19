@@ -1,9 +1,54 @@
 <template name="adriteeconomyline">
-  
   <div class="container">
-    {{> reactiveTable collection=adriteeconomyline settings=settings}}
+
+    <div class="row">
+      {{> adriteheader }}
+    </div>
+      
+    <div class="row">
+      {{> reactiveTable collection=adriteeconomyline settings=settings}}
+    </div>
+
+    <div class="row">
+      {{> adritefooter}}
+    </div>
+    
+    <div class="row">
+      {{> yield region='charges'}}
+    </div>
   </div>
   
-  {{> yield region='charges'}}
-  
 </template>
+
+<template name="adritefooter">
+  <h4>RUSH ORDER SERVICE 24 HR QUICK SERVE!</h4>
+  <h5>Rush orders are available as our production schedule allows, please contact Customer Service for details.</h5>
+  <ul>
+    <li>For latex orders up to 5,000 balloons:</li>
+    <ul>
+      <li>Ship in 1 Day add - $80.00(A)</li>
+      <li>Ship in 2 Days add - $50.00(A)</li>
+    </ul>
+  </ul>
+
+  <ul>
+    <li>Complete order and approved art must be received by NOON ET at factory.</li>
+    <li>Stock ink colours ONLY.</li>
+    <li>Proof request will add production time to rush orders</li>
+    <li>Please contact Customer Service on orders of more than 5,000 balloons.</li>
+  </ul>
+</template>
+
+<template name="adriteheader">
+  
+  <h1>AdRite™ Balloons – Economy Line</h1>
+
+  <p>AdRite balloons are ideal for special, price-sensitive promotions demanding a low-cost, printed balloon.  They are made of 100% natural latex and are available in two sizes – 9" and 11".  AdRite balloons are available in the most popular balloon colours featuring the same IMPRESS II® print as Qualatex® latex balloons.</p>
+
+  <h4>The prices below include balloons with one-colour/one-side imprint Impress II® print; add any additional charges.</h4>
+
+</template>
+
+
+
+

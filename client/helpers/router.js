@@ -284,7 +284,7 @@ Router.map(function() {
     path: '/giantlatexballoons',
     template: 'giantlatexballoons',
     yieldTemplates: {
-      'charges': {to: 'charges'}
+      'giantlatexcharges': {to: 'charges'}
     }, 
     waitOn: function () {
       return [Meteor.subscribe('giantlatexballoons'),

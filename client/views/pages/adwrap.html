@@ -1,9 +1,34 @@
 <template name="adwrap">
   
   <div class="container">
-    {{> reactiveTable collection=adwrap settings=settings}}
+   
+    <div class="row">
+      <h1> AdWrap® Balloons</h1>
+      <h4>One-Colour/Wrap around IMPRESS II® Print</h4>
+
+      <p>AdWrap balloons increase your message visibility and are ideal for a wide range of promotions.  Your logo or message, surrounded by one of the stock designs, appears four times on the balloon to create a custom image.</p>
+
+    </div>
+    
+    <div class="row">
+      {{> reactiveTable collection=adwrap settings=settings}}
+    </div>
+
+    <div class="row">
+      {{> adwrapfooter}}
+    </div>
+
+    <div class="row">
+      {{> yield region='charges'}}
+    </div>
+
   </div>
   
-  {{> yield region='charges'}}
   
+</template>
+
+<template name="adwrapfooter">
+    <h4>Additional Information</h4>
+    <p>Black or White ink is recommended, although other standard Qualatex® ink colours are available. Because of the random nature of the Wrap Around IMPRESS II® printing process, printing will overlap and some smearing may occur.</p>
+    <p><strong>Custom AdWrap Balloons</strong> Using symbols unique to your client’s product or business, a Custom AdWrap design can be created especially for them. Custom AdWrap balloons are available with an initial minimum order of 2,500 balloons.</p>
 </template>
