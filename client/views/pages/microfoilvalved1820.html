@@ -1,19 +1,52 @@
 <template name="microfoilvalved1820">  
   <div class="container">
+
     <div class="row">
-      <h3>18” and 20” Valved Balloons: One-Side Print</h3>
+      {{> microheader }}
+    </div>
+
+    <div class="row">
       {{> reactiveTable collection=microfoilvalved1820 settings=settings}}
     </div>
 
     <div class="row">
-        <h3>36” Valved Balloons: One-Side Print</h3>
-        {{> microfoilvalved36 }}
+      <h4>36” Valved Balloons</h4>
+      {{> microfoilvalved36 }}
     </div>
-
     
     <div class="row">
-      <h5>Note:  Helium-filled Microfoil balloons may not float in altitudes exceeding approximately 3,000 feet.</h5>
+      {{> microfooter}}
+    </div>
+    
+    <div class="row">      
       {{> yield region='charges'}}
     </div>
   </div>
+</template>
+
+<template name="microheader">
+  <h1>Small Quantity Microfoil® Balloons</h1>
+  <h4>18” and 20” Valved Balloons</h4>
+  <p><strong>Screen Printing:</strong>Prices include valved balloons with one-side screen imprint; additional charges may apply.</p>
+  <aside>One-Side Print.  Price per Balloon $CAD <span>4AB</span></aside>
+
+</template> 
+
+<template name="microfooter">
+
+  <h5>Note:  Helium-filled Microfoil balloons may not float in altitudes exceeding approximately 3,000 feet.</h5>
+
+</template> 
+
+<template name="smallmicrofoilcharges">
+  <ul>
+    <li><strong>Screen Charge:</strong> $100.00(A) per imprint & colour.  No charge for second-side screen(s) if using same art.</li>
+    <li><strong>Photo Screen Charge:</strong> $36.00(A) per imprint.</li>
+    <li><strong>Second-Side Imprint):</strong>  18" & 20" balloons - $.44(A) per balloon; 36" balloons - $3.00(A) per balloon.  See above for applicable screen charges.</li>
+    <li><strong>Second-Side Imprint (multi-colour):</strong>  250 piece minimum.  For 18" & 20" balloons, same print second side $.50(A) per colour, per piece.</li>
+    <li><strong>For different print second side:</strong>  $.60(A) per colour, per piece. See above for applicable screen charges.</li>
+    <li><strong>Custom Ink Blend:</strong>  $90.00(A) per colour, custom ink blends are not inventoried.**Exact PMS colour matches cannot be guaranteed**</li>
+    <li><strong>Art Charge:</strong> $50.00(A) per hour.</li>
+  </ul>
+
 </template>

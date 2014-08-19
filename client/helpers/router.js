@@ -247,7 +247,7 @@ Router.map(function() {
     path: '/microfoilvalved',
     template: 'microfoilvalved1820',
     yieldTemplates: {
-      'charges': {to: 'charges'}
+      'smallmicrofoilcharges': {to: 'charges'}
     }, 
     waitOn: function () {
       return [Meteor.subscribe('microfoilvalved1820'),

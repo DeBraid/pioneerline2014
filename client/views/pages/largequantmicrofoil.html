@@ -1,31 +1,16 @@
 <template name="largequantmicrofoil">  
   <div class="container">
+    
     <div class="row">
-      <h3>18” and 20” Valved Balloons: One-Side Print</h3>
+      {{> largequantheader }}
+    </div>
+
+    <div class="row">
       {{> reactiveTable collection=largequantmicrofoil settings=settings}}
     </div>
 
-    
     <div class="row">
-      <ul>
-          <li>1/c is for a single colour print on silver</li>
-        <li>2/c can be 2 spot colours on silver, or 1 spot colour on solid colour balloon</li>
-        <li>All charges for process printing included in pricing</li>
-        <li>18”, 20”and 36”– No additional charge for 2nd side, 2nd side doesn’t have to be same print as front side</li>
-        <li>Ink blend $90.00(A)  per colour, per run **Exact PMS colour matches cannot be guaranteed**</li>
-        <li>Art Charge $50.00(A) per hour</li>
-        <li>Overruns/Underruns: All orders subject to +/- 10%</li>
-        <li>Reruns as low as 1,500 pieces.</li>
-        <li>Contact Customer Service for rerun pricing</li>
-      </ul>
-    </div>
-
-    <div class="row">
-      <h3>Microfoil® Balloons Special Shapes</h3>
-      <h5>Balloons for Point-of-Purchase</h5>
-      <p>The power of point-of-purchase displays is increased with the use of special-shape Microfoil balloons.  They add colour and motion to any display to boost brand recognition and increase sales without the loss of floor space.</p>
-      <p>Contact Customer Service for price quotes.  Pricing will depend on the number of colours, if balloons are printed on one side or two sides, and the overall size and shape of the balloon.</p>
-      <p><strong>Normal minimums: 5,000 balloons per shape and per design</strong></p>
+      {{> largequantfooter }}
    </div>
     
     <div class="row">
@@ -34,4 +19,37 @@
 
 
   </div>
+</template>
+
+<template name="largequantheader">
+    <h1>Large Quantity Microfoil® Balloons</h1>
+    <h4>18" and 20" Valved Balloons Flexographic Printing</h4> 
+    <p><strong>Screen Printing:</strong> Prices include valved balloons with one-side screen imprint; additional charges may apply.</p>
+    <div class="col-sm-12">
+      {{> microshapes}}
+    </div>
+    <aside>Silver/Silver. Price per Balloon $CAD <span>CDEF</span></aside>
+
+</template>
+
+<template name="microshapes">
+  <h4>Microfoil® Balloons Special Shapes</h4>
+  <h5>Balloons for Point-of-Purchase</h5>
+  <p>The power of point-of-purchase displays is increased with the use of special-shape Microfoil balloons.  They add colour and motion to any display to boost brand recognition and increase sales without the loss of floor space.</p>
+  <p>Contact Customer Service for price quotes.  Pricing will depend on the number of colours, if balloons are printed on one side or two sides, and the overall size and shape of the balloon.</p>
+  <p><strong>Normal minimums: 5,000 balloons per shape and per design</strong></p>
+</template>
+
+<template name="largequantfooter">
+ <ul>
+    <li>1/c is for a single colour print on silver</li>
+    <li>2/c can be 2 spot colours on silver, or 1 spot colour on solid colour balloon</li>
+    <li>All charges for process printing included in pricing</li>
+    <li>18”, 20”and 36”– No additional charge for 2nd side, 2nd side doesn’t have to be same print as front side</li>
+    <li>Ink blend $90.00(A)  per colour, per run **Exact PMS colour matches cannot be guaranteed**</li>
+    <li>Art Charge $50.00(A) per hour</li>
+    <li>Overruns/Underruns: All orders subject to +/- 10%</li>
+    <li>Reruns as low as 1,500 pieces.</li>
+    <li>Contact Customer Service for rerun pricing</li>
+  </ul>
 </template>
