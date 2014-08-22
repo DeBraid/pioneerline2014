@@ -6,10 +6,10 @@ Template.adwrap.settings = function () {
                   label: 'Product',
                   fn: function (name, object) {
                       var image = object.PSD.slice(0,-4);
-                      var html = '<a name="' + name + '" href="product/' + object._id + '">' + name + '</a>' + 
-                              '<div class="thumbnail tableimages">' + 
-                                  '<img src="' + image + '.jpg' + '">' + 
-                              '</div>';
+                      var html = '<h3 class="productname">' + name + '</h3>' + 
+                            '<div class="thumbnail tableimages">' + 
+                                '<img src="' + image + '.jpg' + '">' + 
+                            '</div>';
                       return new Spacebars.SafeString(html);
                     }
                 }, {

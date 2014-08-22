@@ -19,16 +19,16 @@ Template.reactiveTable.events({
   'click .tableimages': function(e,t) {
         e.preventDefault();
         $('.modal').modal();
-        myImage = $(e.target).attr('src');
-        myText = $(e.target).parent().siblings('h3').children('a').html();
+
+        _this = $(e.target);
+        myImage = _this.attr('src');
+        myText = _this.parent().siblings('h3').html();
 
         var newTitle = $('.modal-title');
         var newModal = $('.modal-body > div');
 
         newTitle.text('' + myText + '');
         newModal.html('<div class="col-lg-12"><img id="modalImage" src="'+ myImage + '" /></div>');
-
-        // $('#modalImage').css('height',$( window ).height()*2 );
         
     }
 });

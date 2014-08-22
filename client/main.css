@@ -4,6 +4,14 @@ html, body {
   background-color: rgba(0, 154, 226, 0.1);
 }
 
+h1 {
+        font-weight: 600;
+        font-size: 2em;
+        letter-spacing: 10px;
+        color: #252175;
+
+      }
+
 
 /*********************************************************************************/
 /* TABLE (REACTIVE TABLE)                                                                        */
@@ -29,6 +37,7 @@ table {
 
 .thumbnail {
   margin-bottom: 0;
+  cursor: pointer;
 }
 /*********************************************************************************/
 /* NAVBAR                                                                        */
