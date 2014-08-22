@@ -4,6 +4,7 @@
     {{> roundheader}}  
   </div>
 
+
   <div class="container-fluid">
     <div class="row">
         
@@ -27,8 +28,57 @@
 <template name="roundheader">
   <h1>Latex One-Colour Print Balloons</h1>
 
-  <p>The prices below include balloons with a one-colour/two-side same Impress II® print; add additional charges</p>
+  <p>The prices below include balloons with a one-colour/one-side same Impress II® print; add additional charges</p>
 
   <aside>Price Per Balloon $CAD <span>4ABCD</span></aside>
     
 </template> 
+
+
+<template name="productShow">
+
+  <div class="container">
+      <div id="title-row" class="row">
+        
+
+        <div id="palet" class="col-lg-7">
+          <img src="na.jpg" alt="">
+        </div>
+
+      </div>
+
+      <div id="image-list-row" class="row">
+        <div id="printed-img" class="col-lg-5">
+          <img src="na.jpg" alt="">
+        </div>
+        
+       
+   
+
+      </div>
+    
+
+  </div>
+
+</template>
+
+<template name="productTitle">
+  {{#each roundballoons}}
+        <div id="title" class="col-lg-5">
+          {{[Product Description]}}
+        </div>
+    {{/each}}
+</template>
+
+
+<template name="priceList">
+   {{#each roundballoons}}
+        <div id="price-list" class="col-lg-7">
+          <p>{{[250]}}</p>
+          <p>{{[500]}}</p>
+          <p>{{[1000]}}</p>
+          <p>{{[2500]}}</p>
+        </div>
+    {{/each}}
+
+</template>

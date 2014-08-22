@@ -4,14 +4,19 @@ Template.roundballoons.settings = function () {
         fields: [{
                         key: 'Product Description',
                         label: 'Product',
+                        sort: 'descending',
                         fn: function (name, object) {
                             var image = object.PSD.slice(0,-4);
-                    
-                            var html = '<h3 class="productname">' + name + '</h3>' + 
-                                    '<div class="thumbnail tableimages">' + 
-                                        '<img src="' + image + '.jpg' + '">' + 
-                                    '</div>';
-                            return new Spacebars.SafeString(html);
+                            var twofifty = '250';
+                            
+                            if ( name.indexOf("Jewel") > -1 ) {
+
+                                var html = '<h3 class="productname">' + name + '</h3>' + 
+                                '<div class="thumbnail tableimages">' + 
+                                     '<h1>' + object[250] + '</h1>' + 
+                                '</div>';
+                                return new Spacebars.SafeString(html);
+                            }     
                         }
                     }, {
                         key: '250',

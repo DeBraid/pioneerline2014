@@ -31,7 +31,10 @@ var filters = {
 
 }
 
-Router.onBeforeAction(filters.myFilter, {only: ['items']});
+// Router.onBeforeAction(filters.myFilter, {only: ['items']});
+Router.onBeforeAction(function () {
+  document.body.className = "noBackgroundImage"
+});
 
 // Routes
 
@@ -39,7 +42,10 @@ Router.map(function() {
 
 
   this.route('homepage', {
-    path: '/'
+    path: '/',
+    onAfterAction: function  (argument) {
+      return backgroundState;
+    }
   });
 
   this.route('latexonecolround', {

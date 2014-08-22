@@ -1,7 +1,9 @@
-html, body {
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 154, 226, 0.1);
+.showBackgroundImage { 
+  background: url(newpics/pioneerlinebackground.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 h1 {
@@ -253,7 +255,7 @@ header
 }
 
 #modalImage {
-  height: 60%;
+  width: 100%;
 }
 
 .modal-title {

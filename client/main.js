@@ -6,7 +6,37 @@ Global client-side code. Loads last.
 
 /+ ---------------------------------------------------- */
 
-//
+
+Template.homepage.rendered = function () {
+  
+    var route = Router.current();
+    
+    if ( route && route.path == '/' || '/contact' ) {
+        console.log(route.path);
+        document.body.className = "showBackgroundImage";
+    }
+};
+
+Template.contact.rendered = function () {
+  
+    var route = Router.current();
+    
+    if ( route && route.path == '/contact' ) {
+        console.log(route.path);
+        document.body.className = "showBackgroundImage";
+    }
+};
+
+// UI.registerHelper({
+//     backgroundState: function () {
+//         var route = Router.current();
+    
+//         if ( route && route.path == '/' || '/contact' ) {
+//             console.log(route.path);
+//             document.body.className = "showBackgroundImage";
+//         }
+//     }
+// });
 
 Template.footer.rendered = function () {
   var height_diff = $(window).height() - $('body').height();
