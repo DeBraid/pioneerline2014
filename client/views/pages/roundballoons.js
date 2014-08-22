@@ -1,20 +1,20 @@
-Template.roundballoons.events({
-    'click img': function(e,t) {
-        e.preventDefault();
-        $('.modal').modal();
-        myImage = $(e.target).attr('src');
-        myText = $(e.target).parent().siblings('h3').children('a').html();
+// Template.roundballoons.events({
+//     'click .tableimages': function(e,t) {
+//         e.preventDefault();
+//         $('.modal').modal();
+//         myImage = $(e.target).attr('src');
+//         myText = $(e.target).parent().siblings('h3').children('a').html();
 
-        var newTitle = $('.modal-title');
-        var newModal = $('.modal-body > div');
+//         var newTitle = $('.modal-title');
+//         var newModal = $('.modal-body > div');
 
-        newTitle.text('' + myText + '');
-        newModal.html('<div class="col-lg-12"><img id="modalImage" src="'+ myImage + '" /></div>');
+//         newTitle.text('' + myText + '');
+//         newModal.html('<div class="col-lg-12"><img id="modalImage" src="'+ myImage + '" /></div>');
 
-        // $('#modalImage').css('height',$( window ).height()*2 );
+//         // $('#modalImage').css('height',$( window ).height()*2 );
         
-    }
-});
+//     }
+// });
 
 
 
