@@ -168,6 +168,10 @@ header
   letter-spacing: 2px;
 }
 
+.contact-header {
+  padding: 3em 0 3em 0 !important;
+}
+
 #codes, 
 .footer,
 #charges {
@@ -238,7 +242,6 @@ header
 
 .modal-megamenu {
     width:80%;
-    height:80%;
     margin: 10% auto;
 }
 .modal-body {
@@ -247,4 +250,12 @@ header
 }
 .modal-content {
     height: 100%;
+}
+
+#modalImage {
+  height: 60%;
+}
+
+.modal-title {
+  text-align: center;
 }
