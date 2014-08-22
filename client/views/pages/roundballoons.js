@@ -1,9 +1,27 @@
 Template.projectImageModal.rendered = function () {
-    $('#projectImageModal').on('show.bs.modal', function () {
-        $('#modalImage').css('height',$( window ).height()*0.8);
-    });  
+    // $('#projectImageModal').on('show.bs.modal', function () {
+    //     $('#modalImage').css('height',$( window ).height());
+    // });  
     
 };
+
+Template.roundballoons.events({
+    'click img': function(e,t) {
+        e.preventDefault();
+        $('.modal').modal();
+        myImage = $(e.target).attr('src');
+        myText = $(e.target).parent().siblings('h3').children('a').html();
+
+        var newTitle = $('.modal-title');
+        var newModal = $('.modal-body > div');
+
+        newTitle.text('' + myText + '');
+        newModal.html('<div class="col-lg-12"><img id="modalImage" src="'+ myImage + '" /></div>')
+        
+    }
+});
+
+
 
 Template.roundballoons.settings = function () {
     return {
@@ -46,30 +64,3 @@ Template.roundballoons.settings = function () {
                 ]
     };
 };
-
-
-
-Template.roundballoons.events({
-    'click img': function(e,t) {
-        e.preventDefault();
-        myImage = $(e.target).attr('src');
-        
-
-        console.log(myImage);
-        console.log("myImage");
-        Session.set('data', myImage);
-        var newModal = $("#projectImageModal")
-
-        newModal.html('<div class="col-lg-12"><img id="modalImage" src="'+ myImage + '" /></div>')
-        
-        newModal.modal('show').css({
-            'margin-top': function () { //vertical centering
-                return -($(this).height() / 1000);
-            },
-            'margin-left': function () { //Horizontal centering
-                return -($(this).width() / 1000);
-            }
-        });
-    }
-});
-

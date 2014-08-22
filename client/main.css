@@ -4,7 +4,7 @@
 .tableimages {
   width:50%;
   overflow: hidden;
-  max-height: 35em;
+  max-height: 25em;
 }
 /* headings */
 .reactive-table .sortable {
@@ -217,4 +217,18 @@ header
     .collapsing {
         overflow: hidden!important;
     }
+}
+
+
+.modal-megamenu {
+    width:80%;
+    height:80%;
+    margin: 10% auto;
+}
+.modal-body {
+    max-height:500px;
+    overflow:auto;
+}
+.modal-content {
+    height: 100%;
 }
