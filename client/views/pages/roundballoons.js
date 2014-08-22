@@ -1,10 +1,3 @@
-Template.projectImageModal.rendered = function () {
-    // $('#projectImageModal').on('show.bs.modal', function () {
-    //     $('#modalImage').css('height',$( window ).height());
-    // });  
-    
-};
-
 Template.roundballoons.events({
     'click img': function(e,t) {
         e.preventDefault();
@@ -16,7 +9,9 @@ Template.roundballoons.events({
         var newModal = $('.modal-body > div');
 
         newTitle.text('' + myText + '');
-        newModal.html('<div class="col-lg-12"><img id="modalImage" src="'+ myImage + '" /></div>')
+        newModal.html('<div class="col-lg-12"><img id="modalImage" src="'+ myImage + '" /></div>');
+
+        // $('#modalImage').css('height',$( window ).height()*2 );
         
     }
 });

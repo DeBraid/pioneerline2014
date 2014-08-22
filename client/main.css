@@ -4,7 +4,7 @@
 .tableimages {
   width:50%;
   overflow: hidden;
-  max-height: 25em;
+  max-height: 20em;
 }
 /* headings */
 .reactive-table .sortable {
