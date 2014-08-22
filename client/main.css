@@ -2,9 +2,9 @@
 /* TABLE (REACTIVE TABLE)                                                                        */
 /*********************************************************************************/
 .tableimages {
-  max-height:150px;
-  width:140px;
+  width:50%;
   overflow: hidden;
+  max-height: 35em;
 }
 /* headings */
 .reactive-table .sortable {

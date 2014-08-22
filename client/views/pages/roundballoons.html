@@ -4,6 +4,12 @@
     {{> roundheader}}  
   </div>
 
+  <div class="container-fluid">
+    <div class="row">
+        {{> projectImageModal}}
+    </div>
+  </div>
+  
   <div class="row">
     {{> reactiveTable collection=roundballoons settings=settings}}
   </div>
@@ -26,3 +32,17 @@
   <aside>Price Per Balloon $CAD <span>4ABCD</span></aside>
     
 </template> 
+
+<!-- A modal that contains the bigger view of the image selected -->
+<template name="projectImageModal">
+  <div class="modal fade in" id="projectImageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h1>Image here</h1>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
