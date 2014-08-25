@@ -1,71 +1,57 @@
 <template name="promoflags">
-  <h1>Promotional Flags</h1>
-<h4>Prices below include flags with same design one-side digital imprint with mirror image on second side</h4>
-
-<h3>Promotional Bow Flags </h3>
-<aside>Price per Piece  5C</aside>
-<img src="2014flagsredone.psd" alt="">
-
-
-{{> reactiveTable here}}
-
-Accessories:
-
-Metal Cross Bar Base with Ground Stake and Rotating Ball Bearing Stem (# 31181) $45.75 (c) each
-For Indoor or Outdoor use. If using outdoors, we recommend purchasing the PVC Water Weight Bag
-
-PVC Water Weight Bag (# 31186) $9.00 (c) each
-For use with Metal Cross Bar Base
-
-Extra Ground Stake (# 31180) $27.50(c) each
-Equipped with Rotating Ball Bearing Stem
   
+  <div class="container">
+    
+    <div class="row">
+      {{> promoflagscontent}}
+      
+    </div>
 
-Economy Flags 
-Product Description                                                                                                      Price per Piece        4C
-PSD
-One Side Print                                                                                                                           
-2 -5
-6 -10
-11 -25
-26 -99
-2014econoflags.psd
-15ft Economy Flag Kit (Includes pole and ground stake)
-188.00
-171.00
-157.00
-152.00
+    <div class="row">
+      {{> econflags}}
+    </div>
 
+  </div>
 
-Price above includes flags with same design one-side digital imprint with mirror image on second side
+</template>
 
 
-Product Description                                                                                                                 Price per Piece
+<template name="promoflagscontent">
+  <h1>Promotional Flags</h1>
+    <h4>Prices below include flags with same design one-side digital imprint with mirror image on second side</h4>
+
+    <h3>Promotional Bow Flags </h3>
+    <aside>Price per Piece  5C</aside>
+
+    <img src="2014flagsredone.psd" alt="">
 
 
- Two Side Print                                                                                                                           
-2 -5
-6 -10
-11 -25
-26 -99
+    {{> reactiveTable here}}
 
+    <h4>Accessories:</h4>
 
-15ft Economy Flag Kit (Includes pole and ground stake)
-258.00
-247.00
-208.00
-197.00
+    <ul>
+      <li><strong>Metal Cross Bar Base with Ground Stake and Rotating Ball Bearing Stem (# 31181) $45.75 each</strong>.  For Indoor or Outdoor use. If using outdoors, we recommend purchasing the PVC Water Weight Bag</li>
+      <li><strong>PVC Water Weight Bag (# 31186) $9.00 each.</strong>  For use with Metal Cross Bar Base</li>
+      <li><strong>Extra Ground Stake (# 31180) $27.50 each.</strong>  Equipped with Rotating Ball Bearing Stem</li>
+    </ul>
+</template>
 
+<template name="econflags">
+  <h1>Economy Flags</h1> 
+  <aside>Price per Piece  4C</aside>
+  
+  <img src="2014econoflags.jpg" alt="">
+  
+  {{> reactiveTable here}}
+  
+  <p><strong>*</strong> same design one-side digital imprint with mirror image on second side</p>
 
-Price above includes flags with same design digital imprint on 2 side
+  <p><strong>**</strong> Price includes flags with same design digital imprint on 2 side</p>
 
+  <section>
+    <p><strong>Shipping</strong>F.O.B: Miami Florida. Duty and Brokerage may apply</p>
+    <p>Approx. 3-4 business weeks from confirmed order and sketch approval</p>
+  </section>
 
-
-
-**Please refer to the Promotional Catalogue for more information**
-
-
-Shipping
-F.O.B: Miami Florida. Duty and Brokerage may apply
-Approx. 3-4 business weeks from confirmed order and sketch approval
 </template>

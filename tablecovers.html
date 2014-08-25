@@ -1,0 +1,119 @@
+<template name="tablecovers">
+
+    <div class="container">
+
+        <div class="row">
+            <h1>Table Covers</h1>
+
+            <h4>Provide maximum coverage with our high-quality, 100% polyester poplin 4-sided table covers.</h4>
+
+            <ul>
+                <li>Fitted Table Covers also available. <strong>Must mention Fitted Table Cover on purchase order.</strong>
+                </li>
+                <li><strong>Set-Up Charge:</strong> $50.00 only one SET UP CHARGE PER TABLE COVER regardless of number of imprint areas (with same imprint).</li>
+                <li><strong>Top Imprint:</strong> Add $15.00 and includes the entire quantity with same imprint.</li>
+            </ul>
+        </div>
+
+        <div class="row">
+            {{> nonfitted}}
+        </div>
+
+        <div class="row">
+            {{> stretch}}
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            {{> tablecoversextra}}
+
+        </div>
+    </div>
+
+</template>
+
+
+<template name="nonfitted">
+    <section>
+        <h3>Non-Fitted Table Covers</h3>
+        <aside>Price per Piece 4C2D</aside>
+        {{> reactiveTable collection=nonfittedtablecovers settings=settings}}
+    </section>
+
+    <img src="tabelcover.jpg" alt="">
+</template>
+
+
+<!-- ************************************** -->
+<template name="stretch">
+
+    <section>
+        <h3>Stretch Table Covers</h3>
+        <aside>Price per Piece 4C2D</aside>
+        {{> reactiveTable collection=stretchtablecovers settings=settings}}
+    </section>
+
+</template>
+
+<template name="tablecoversextra">
+    <section>
+        <p><strong>Price above include a 4-sided table cover with full-colour dye sublimation print; add any additional charges</strong>
+        </p>
+        <p><strong>Set up (#36996) $50.00.</strong> Only one SET UP CHARGE PER TABLE COVER regardless of number of imprint areas and includes the entire quantity with same imprint.</p>
+        <p>Top Print Add: $15.00</p>
+    </section>
+
+    <section>
+        <h4>Product Material:</h4>
+        <ul>
+            <li>300 Polyester Denier</li>
+            <li>Water, Fire & Stain Resistant- Machine Washable</li>
+            <li><strong>ALL TABLE COVERS FIT 30” DEEP TABLES.</strong> 24” deep table covers also available, Contact Customer Service.</li>
+        </ul>
+    </section>
+
+
+    <h3>Imprint Area:</h3> 
+
+    <section>
+        <h4>6ft. Non-Fitted Table Cover Full Colour Dye Sublimation Imprint Area</h4>
+        <ul>
+            <li>Front/Back Imprint Area: 21”H x 60”W</li>
+            <li>Side Imprint Area: 21”H x 24”W</li>
+        </ul>
+    </section>
+
+    <section>
+        <h4>6ft. Non-Fitted Table Cover Full Colour/ Full Bleed Imprint Area</h4>
+        <ul>
+            <li>Front/Back Imprint Area: 29”H x 72”W</li>
+            <li>Side Imprint Area: 29”H x 30”W</li>
+            <li>All Over Imprint Area: 88”H x 130”W</li>
+        </ul>
+    </section>
+
+    <section>
+        <h4>8ft. Non-Fitted Table Cover Full Colour Dye Sublimation Imprint Area</h4>
+        <ul>
+            <li>Front/Back Imprint Area: 21”H x 72”W</li>
+            <li>Side Imprint Area: 21”H x 24”W</li>
+        </ul>
+    </section>
+
+    <section>
+        <h4>8ft. Non-Fitted Table Cover Full Colour/ Full Bleed Imprint Area</h4>
+        <ul>
+            <li>Front/Back Imprint Area: 29”H x 96”W</li>
+            <li>Side Imprint Area: 29”H x 30”W</li>
+            <li>All Over Imprint Area: 88”H x 154”W</li>
+        </ul>
+    </section>
+
+
+    <section>
+        <p><strong>Shipping</strong>F.O.B: Miami Florida. Duty and Brokerage may apply</p>
+        <p>Approx. 3-4 business weeks from confirmed order and sketch approval</p>
+    </section>
+</template>
