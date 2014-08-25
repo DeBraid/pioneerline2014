@@ -7,12 +7,12 @@
 }
 
 h1 {
-        font-weight: 600;
-        font-size: 2em;
-        letter-spacing: 10px;
-        color: #252175;
+  font-weight: 600;
+  font-size: 2em;
+  letter-spacing: 10px;
+  color: #252175;
 
-      }
+}
 
 
 /*********************************************************************************/
@@ -254,10 +254,10 @@ header
 
 .modal-megamenu {
     width:80%;
-    margin: 10% auto;
+    margin: 3% auto;
 }
 .modal-body {
-    max-height:500px;
+    max-height:600px;
     overflow:auto;
 }
 .modal-content {
@@ -265,7 +265,8 @@ header
 }
 
 #modalImage {
-  width: 100%;
+  width: 80%;
+  margin: 10%;
 }
 
 .modal-title {
