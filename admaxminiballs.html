@@ -1,0 +1,65 @@
+<template name="admaxminiballs">
+  
+  <div class="container">
+   
+    <div class="row">
+      {{> admaxminiballsheader }}
+    </div>
+    
+    <div class="row">
+      {{> reactiveTable collection=admaxminiballs settings=settings}}
+    </div>
+
+    <div class="row">
+      {{> admaxminiballsfooter}}
+    </div>
+
+    <div class="row">
+      {{> admaxminiballscharges}}
+    </div>
+
+
+  </div>
+  
+  
+</template>
+
+<template name="admaxminiballsheader">
+  <h1>AdMax™ Mini Sport Balls </h1>
+  <h4>AdMax Mini Sport Balls are made of high-quality, soft, textured, and embossed vinyl.</h4>
+
+  <p>The prices below include AdMax Mini Sports Balls with one-colour/one-side imprint; add any additional charges.</p>
+  <aside>Price Per Balloon $CAD <span>2ABCD</span></aside>
+</template>
+
+<template name="admaxminiballsfooter">
+
+  <div class="col-lg-12">
+    <h4>Colour Options</h4>
+    <ul>
+      <li>Football Colours:  White, Brown, Yellow, Orange, Red, Green, Blue, Purple, Pink, and Black</li>
+      <li>Basketball Colours:  White, Yellow, Orange, Red, Green, and Blue</li>
+    </ul>
+  </div>
+
+  <div class="col-lg-12">
+    <ul>
+      <li>*As with any inflated product, size will vary; stated measurements are approximate. Balls may become deflated over time but can be refreshed through the reinflatable athletic valve.</li>
+      <li>**Minimum 100 balls per style. Minimum 50 balls per colours, No mixing shapes**</li>
+      <li>Note:  Imprint on Football and Basketball will be imprinted on smooth, non-pebbled area of ball.</li>  
+      <li><strong>Plain Mini Sports Balls: Minimum 50 balls per colour/per style: $1.64(A) per ball</strong></li>
+    </ul>
+  </div>
+  
+</template>
+
+<template name="admaxminiballscharges">
+  <ul>
+    <li><strong>Plate Charge:</strong>  $50.00(A) per colour. One time only</li>
+    <li><strong>Additional Colour Charge:</strong>  $.44(A) per colour, per imprint.  2-colour maximum on all Mini Sport Balls.  Minimum 250 balls for additional colour.</li>
+    <li><strong>Second Side Same</strong> Imprint:  $.44(A) per ball.  (Available on Football only.)</li>
+    <li><strong>Second Side Different</strong> Imprint:  $.48(A) per ball (Available on Football only.)</li>
+    <li><strong>Custom Ink Blend</strong>:  $50.00(A) per ink colour.  **Exact PMS colour matches cannot be guaranteed**.</li>
+    <li><strong>Art Charge:</strong> $50.00(A) per hour.</li>
+  </ul>
+</template>
