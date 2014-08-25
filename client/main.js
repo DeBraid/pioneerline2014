@@ -12,7 +12,7 @@ Template.homepage.rendered = function () {
     var route = Router.current();
     
     if ( route && route.path == '/' || '/contact' ) {
-        console.log(route.path);
+        
         document.body.className = "showBackgroundImage";
     }
 };
@@ -22,7 +22,7 @@ Template.contact.rendered = function () {
     var route = Router.current();
     
     if ( route && route.path == '/contact' ) {
-        console.log(route.path);
+        
         document.body.className = "showBackgroundImage";
     }
 };

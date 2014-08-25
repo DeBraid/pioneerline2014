@@ -42,10 +42,7 @@ Router.map(function() {
 
 
   this.route('homepage', {
-    path: '/',
-    onAfterAction: function  (argument) {
-      return backgroundState;
-    }
+      path: '/'
   });
 
   this.route('latexonecolround', {
