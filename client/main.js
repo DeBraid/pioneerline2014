@@ -7,6 +7,21 @@ Global client-side code. Loads last.
 /+ ---------------------------------------------------- */
 
 
+Template.layout.events({
+    'click #jewel': function (e,t) {
+        e.preventDefault();
+        
+        var selection = e.target.name,
+        inp = el = $('.reactive-table-input');
+        
+        inp.val(selection);
+
+        Heart
+
+    }
+});
+
+
 Template.homepage.rendered = function () {
   
     var route = Router.current();

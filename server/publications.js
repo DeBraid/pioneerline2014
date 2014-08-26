@@ -81,6 +81,28 @@ Meteor.publish('charges', function() {
   return Charges.find();
 });
 
+Meteor.publish('eventtents', function() {
+  return Eventtents.find();
+});
+
+Meteor.publish('geninfo', function() {
+  return Geninfo.find();
+});
+Meteor.publish('promoflags', function() {
+  return Promoflags.find();
+});
+Meteor.publish('tablecovers', function() {
+  return Tablecovers.find();
+});
+Meteor.publish('popupbanners', function() {
+  return Popupbanners.find();
+});
+
+
+
+
+
+
 
 // // Publish a single item
 // Meteor.publish('singleItem', function(id) {

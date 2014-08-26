@@ -283,6 +283,7 @@ Router.map(function() {
       }
     }
   });
+
   this.route('giantlatexballoons', {
     path: '/giantlatexballoons',
     template: 'giantlatexballoons',
@@ -323,5 +324,66 @@ Router.map(function() {
   this.route('signup');
 
   this.route('forgot');
+
+  // newroutes
+  this.route('eventtents', {
+    path: '/eventtents',
+    template: 'eventtents',
+    waitOn: function () {
+      return Meteor.subscribe('eventtents');
+    },
+    data: function () {
+      return {
+        eventtents: Eventtents.find()      }
+    }
+  });
+
+  this.route('popupbanners', {
+    path: '/popupbanners',
+    template: 'popupbanners',
+    waitOn: function () {
+      return Meteor.subscribe('popupbanners');
+    },
+    data: function () {
+      return {
+        popupbanners: Popupbanners.find()      }
+    }
+  });
+
+  this.route('tablecovers', {
+    path: '/tablecovers',
+    template: 'tablecovers',
+    waitOn: function () {
+      return Meteor.subscribe('tablecovers');
+    },
+    data: function () {
+      return {
+        tablecovers: Tablecovers.find()      }
+    }
+  });
+
+  this.route('promoflags', {
+    path: '/promoflags',
+    template: 'promoflags',
+    waitOn: function () {
+      return Meteor.subscribe('promoflags');
+    },
+    data: function () {
+      return {
+        promoflags: Promoflags.find()      }
+    }
+  });
+
+  this.route('geninfo', {
+    path: '/geninfo',
+    template: 'geninfo',
+    waitOn: function () {
+      return Meteor.subscribe('geninfo');
+    },
+    data: function () {
+      return {
+        geninfo: Geninfo.find()      }
+    }
+  });
 
 });
