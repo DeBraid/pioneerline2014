@@ -12,11 +12,13 @@ Template.layout.events({
         e.preventDefault();
         
         var selection = e.target.name,
-        inp = el = $('.reactive-table-input');
+        inp = $('.reactive-table-input');
         
+        // 1.  insert text into filter/search bar
         inp.val(selection);
-
-        Heart
+        
+        // 2.  simulate key event and filter table
+        inp.trigger('keyup');
 
     }
 });
