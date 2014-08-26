@@ -53,7 +53,6 @@ Template.reactiveTable.events({
 
 Template.reactiveTable.rendered = function () {
 
-    if ( $('.filter-button-container') ) {
         UI.insert(UI.render(Template.filterbuttons), $('.reactive-table-filter').get(0) );
-    } 
+    
 };
