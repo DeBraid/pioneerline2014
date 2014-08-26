@@ -7,8 +7,8 @@ Global client-side code. Loads last.
 /+ ---------------------------------------------------- */
 
 
-Template.layout.events({
-    'click #jewel': function (e,t) {
+Template.filterbuttons.events({
+    'click button': function (e,t) {
         e.preventDefault();
         
         var selection = e.target.name,
