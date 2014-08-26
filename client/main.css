@@ -272,3 +272,8 @@ header
 .modal-title {
   text-align: center;
 }
+
+.filter-button-container button {
+  margin: 4px;
+}
+

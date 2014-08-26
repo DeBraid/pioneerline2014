@@ -6,24 +6,6 @@ Global client-side code. Loads last.
 
 /+ ---------------------------------------------------- */
 
-
-Template.filterbuttons.events({
-    'click button': function (e,t) {
-        e.preventDefault();
-        
-        var selection = e.target.name,
-        inp = $('.reactive-table-input');
-        
-        // 1.  insert text into filter/search bar
-        inp.val(selection);
-        
-        // 2.  simulate key event and filter table
-        inp.trigger('keyup');
-
-    }
-});
-
-
 Template.homepage.rendered = function () {
   
     var route = Router.current();
@@ -43,17 +25,6 @@ Template.contact.rendered = function () {
         document.body.className = "showBackgroundImage";
     }
 };
-
-// UI.registerHelper({
-//     backgroundState: function () {
-//         var route = Router.current();
-    
-//         if ( route && route.path == '/' || '/contact' ) {
-//             console.log(route.path);
-//             document.body.className = "showBackgroundImage";
-//         }
-//     }
-// });
 
 Template.footer.rendered = function () {
   var height_diff = $(window).height() - $('body').height();
@@ -79,3 +50,7 @@ Template.reactiveTable.events({
         
     }
 });
+
+Template.reactiveTable.rendered = function () {
+    UI.insert(UI.render(Template.filterbuttons), $('.reactive-table-filter').get(0) );
+};
