@@ -6,11 +6,6 @@ All publications-related code.
 
 /+ ---------------------------------------------------- */
 
-// Publish all items
-
-Meteor.publish('allItems', function() {
-  return Items.find();
-});
 
 Meteor.publish('adriteeconomyline', function() {
   return Adriteeconomyline.find();
@@ -91,20 +86,13 @@ Meteor.publish('geninfo', function() {
 Meteor.publish('promoflags', function() {
   return Promoflags.find();
 });
+Meteor.publish('econflags', function() {
+  return Econflags.find();
+});
+
 Meteor.publish('tablecovers', function() {
   return Tablecovers.find();
 });
 Meteor.publish('popupbanners', function() {
   return Popupbanners.find();
 });
-
-
-
-
-
-
-
-// // Publish a single item
-// Meteor.publish('singleItem', function(id) {
-//   return Items.find(id);
-// });

@@ -1,11 +1,17 @@
 <template name="eventtents">
-  <h1>Durable Event Tents</h1>
-  <h4>Prices below includes a 10ft. x 10ft. tent frame with 600 Denier storage bag, polyester canopy, 4 metal ground stakes, 4 small canvas draw string, sand weight bags. (Sand not included)</h4>
-  <img src="newnationalcellular.jpg" alt="">
+  <div class="container">
+    <div class="row">
+        <h1>Durable Event Tents</h1>
+        <h4>Prices below includes a 10ft. x 10ft. tent frame with 600 Denier storage bag, polyester canopy, 4 metal ground stakes, 4 small canvas draw string, sand weight bags. (Sand not included)</h4>
 
-  <aside>Price per Piece  4C</aside>
+        <aside>Price per Piece  4C</aside>
 
-  {{> reactiveTable collection=eventtents settings=settings }}
+    </div>
+  </div>
+
+  <div class="row">
+      {{> reactiveTable collection=eventtents settings=settings }}
+  </div>
 
   <h4><strong>Set-Up Charge:</strong> $51.00 only one SET UP CHARGE PER TENT regardless of number of imprint areas and includes entire quantity with same imprint.</h4>
 

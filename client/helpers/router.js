@@ -334,7 +334,8 @@ Router.map(function() {
     },
     data: function () {
       return {
-        eventtents: Eventtents.find()      }
+        eventtents: Eventtents.find()
+      }
     }
   });
 
@@ -346,7 +347,8 @@ Router.map(function() {
     },
     data: function () {
       return {
-        popupbanners: Popupbanners.find()      }
+        popupbanners: Popupbanners.find()
+      }
     }
   });
 
@@ -358,7 +360,8 @@ Router.map(function() {
     },
     data: function () {
       return {
-        tablecovers: Tablecovers.find()      }
+        tablecovers: Tablecovers.find()
+      }
     }
   });
 
@@ -366,11 +369,14 @@ Router.map(function() {
     path: '/promoflags',
     template: 'promoflags',
     waitOn: function () {
-      return Meteor.subscribe('promoflags');
+      return [Meteor.subscribe('promoflags'),
+              Meteor.subscribe('econflags')];
     },
     data: function () {
       return {
-        promoflags: Promoflags.find()      }
+        promoflags: Promoflags.find(),      
+        econflags: Econflags.find()      
+      }
     }
   });
 
@@ -382,7 +388,8 @@ Router.map(function() {
     },
     data: function () {
       return {
-        geninfo: Geninfo.find()      }
+        geninfo: Geninfo.find()
+      }
     }
   });
 
