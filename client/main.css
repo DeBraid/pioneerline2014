@@ -277,3 +277,12 @@ header
   margin: 4px;
 }
 
+@media (max-width: 500px) {
+  
+  .btn-responsive {
+    padding: 2px 4px;
+    font-size: 90%;
+    line-height: 1.1;
+    border-radius: 3px;
+  }
+}
