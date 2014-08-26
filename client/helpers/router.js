@@ -356,11 +356,13 @@ Router.map(function() {
     path: '/tablecovers',
     template: 'tablecovers',
     waitOn: function () {
-      return Meteor.subscribe('tablecovers');
+      return [Meteor.subscribe('nonfittedtablecovers'),
+              Meteor.subscribe('stretchtablecovers')]
     },
     data: function () {
       return {
-        tablecovers: Tablecovers.find()
+        nonfittedtablecovers: Nonfittedtablecovers.find(),
+        stretchtablecovers: Stretchtablecovers.find()
       }
     }
   });

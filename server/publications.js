@@ -90,8 +90,11 @@ Meteor.publish('econflags', function() {
   return Econflags.find();
 });
 
-Meteor.publish('tablecovers', function() {
-  return Tablecovers.find();
+Meteor.publish('nonfittedtablecovers', function() {
+  return Nonfittedtablecovers.find();
+});
+Meteor.publish('stretchtablecovers', function() {
+  return Stretchtablecovers.find();
 });
 Meteor.publish('popupbanners', function() {
   return Popupbanners.find();
