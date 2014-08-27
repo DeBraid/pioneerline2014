@@ -15,6 +15,7 @@ h1 {
 }
 
 
+
 /*********************************************************************************/
 /* TABLE (REACTIVE TABLE)                                                                        */
 /*********************************************************************************/
@@ -31,10 +32,6 @@ h1 {
 /* data inside the table */
 #table-container {
   color: #0072bb;
-}
-
-table {
-  border-color: red;
 }
 
 .thumbnail {
@@ -64,7 +61,6 @@ table {
   text-transform: uppercase;
 }
 
-
 #navbar-collapse > ul > li > a:hover {
   color: #f99621;
   background-color: #0072bb;
@@ -78,7 +74,6 @@ table {
 .dropdown-menu {
   background-color: #82c13f !important;
 }
-
 
 
 /*********************************************************************************/
@@ -103,7 +98,7 @@ header
     text-shadow: 0 0 0.5px rgba(255,255,255,0.25);
     text-align: center;
     margin: 0;
-    padding: 7em 0 7em 0;
+    padding: 5em 0 5em 0;
     cursor: default;
   }
 
@@ -118,11 +113,13 @@ header
     #header span#four { color: #0072bb }
     
     #header header,
-    body > div:nth-child(2) > div > div > div.row.row-centered > div > form > div
+    body > div:nth-child(2) > div > div > div.row.row-centered > div > form > div,
+    #social > ul
     {
       display: inline-block;
       padding: 3.0em 3.0em 4.5em 3.0em;
       border-radius: 30px;
+      border: solid 1px #fff;
       background: rgb(255,255,127); /* Old browsers */
       /* IE9 SVG, needs conditional override of 'filter' to 'none' */
       background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMjElIiBzdG9wLWNvbG9yPSIjZmZmZjdmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODUlIiBzdG9wLWNvbG9yPSIjYTBiNWQ4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -208,7 +205,8 @@ header
   color: #252175;
   text-shadow: 0 0 0.5px rgba(255,255,255,0.25);
   text-align: center;
-  padding: 4em 0 4em 0;
+  padding: 0em 0 4em 0;
+  margin-top: -3em;
   cursor: default;
 }
 
@@ -250,6 +248,91 @@ header
         overflow: hidden!important;
     }
 }
+/*********************************************************************************/
+/* social                                                                        */
+/*********************************************************************************/
+  ul.icons
+    {
+      cursor: default;
+      font-size: 1.5em;
+    } 
+    
+      ul.icons li
+      {
+        display: inline-block;
+      }
+      
+        ul.icons a
+        {
+          display: inline-block;
+          width: 2.5em;
+          height: 2.5em;
+          line-height: 2.5em;
+          text-align: center;
+          border: 0;
+        }
+
+    ul.social-menu
+    {
+      cursor: default;
+    }
+    
+      ul.social-menu li
+      {
+        display: inline-block;
+        line-height: 1em;
+        border-left: solid 1px #dad9d9;
+        padding: 0 0 0 0.5em;
+        margin: 0 0 0 0.5em;
+      }
+      
+      ul.social-menu li:first-child
+      {
+        border-left: 0;
+        padding-left: 0;
+        margin-left: 0;
+      }
+
+  #social
+  {
+    position: relative;
+    text-shadow: 0 0 0.5px rgba(255,255,255,0.25);
+    text-align: center;
+    margin: 2.5em 0 0 0;
+  }
+
+    #social a
+    {
+      color: #252175;
+      text-shadow: 0 0 0.5px rgba(255,255,255,0.25);
+      border-bottom-color: rgba(255,255,255,0.5);
+    } 
+    
+      #social a:hover
+      {
+        color: #252175;
+        text-shadow: 0 0 0.5px rgba(69,200,159,0.25);
+        border-bottom-color: rgba(53,184,143,0.5);
+      }
+    
+    #social .icons
+    {
+      padding: 0.75em 2em 0.75em 2em;
+      border-radius: 3em;
+      border: solid 1px #fff;
+      display: inline-block;
+      margin: 0 0 3em 0;
+    }
+    
+    #social .copyright
+    {
+      margin: 0 0 9em 0;
+      font-size: 0.8em;
+    }
+
+/************* 
+  END SOCIAL 
+**************/
 
 
 .modal-megamenu {
