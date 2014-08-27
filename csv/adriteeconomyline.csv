@@ -1,7 +1,9 @@
-Product Description,1000,2500,5000,10000,25000
-9inch AdRite Basic Colours,0.19,0.18,0.16,0.14,0.12
-9inch AdRite Crystal / Fun Colours,0.22,0.21,0.18,0.16,0.14
-9inch AdRite Metallic Colours,0.23,0.22,0.19,0.17,0.15
-11inch AdRite Basic Colours,0.24,0.23,0.20,0.18,0.16
-11inch AdRite Crystal / Fun Colours,0.26,0.25,0.22,0.19,0.17
-11inch AdRite Metallic Colours,0.27,0.26,0.23,0.20,0.18
+Product Description,1000,2500,5000,10000,25000,PSD
+9inch AdRite Basic Colours,0.19,0.18,0.16,0.14,0.12,adritebasicpal.psd
+9inch AdRite Crystal Colours,0.22,0.21,0.18,0.16,0.14,adritecrystalpal.psd
+9inch AdRite Fun Colours,0.22,0.21,0.18,0.16,0.14,adritefunpal.psd
+9inch AdRite Metallic Colours,0.23,0.22,0.19,0.17,0.15,adritemetallicpal.psd
+11inch AdRite Basic Colours,0.24,0.23,0.20,0.18,0.16,adritebasicpal.psd
+11inch AdRite Crystal Colours,0.26,0.25,0.22,0.19,0.17,adritecrystalpal.psd
+11inch AdRite Fun Colours,0.26,0.25,0.22,0.19,0.17,adritefunpal.psd
+11inch AdRite Metallic Colours,0.27,0.26,0.23,0.20,0.18,adritemetallicpal.psd

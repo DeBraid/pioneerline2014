@@ -369,3 +369,7 @@ header
     border-radius: 3px;
   }
 }
+
+#biodeg {
+  margin: 0 0 0.5em 0.5em;
+}
