@@ -99,3 +99,13 @@ Meteor.publish('stretchtablecovers', function() {
 Meteor.publish('popupbanners', function() {
   return Popupbanners.find();
 });
+
+Meteor.publish('admaxminisportballs', function() {
+  return Admaxminisportballs.find();
+});
+Meteor.publish('beachballs', function() {
+  return Beachballs.find();
+});
+Meteor.publish('adpunchballs', function() {
+  return Adpunchballs.find();
+});

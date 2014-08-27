@@ -381,4 +381,43 @@ Router.map(function() {
     }
   });
 
+  this.route('admaxminisportballs', {
+    path: '/admaxminisportballs',
+    template: 'admaxminisportballs',
+    waitOn: function () {
+      return Meteor.subscribe('admaxminisportballs');
+    },
+    data: function () {
+      return {
+        admaxminisportballs: Admaxminisportballs.find()
+      }
+    }
+  });
+
+  this.route('adpunchballs', {
+    path: '/adpunchballs',
+    template: 'adpunchballs',
+    waitOn: function () {
+      return Meteor.subscribe('adpunchballs');
+    },
+    data: function () {
+      return {
+        adpunchballs: Adpunchballs.find()
+      }
+    }
+  });
+
+  this.route('beachballs', {
+    path: '/beachballs',
+    template: 'beachballs',
+    waitOn: function () {
+      return Meteor.subscribe('beachballs');
+    },
+    data: function () {
+      return {
+        beachballs: Beachballs.find()
+      }
+    }
+  });
+
 });
