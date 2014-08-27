@@ -373,3 +373,19 @@ header
 #biodeg {
   margin: 0 0 0.5em 0.5em;
 }
+
+#specialshapes {
+  padding: 10em 0 10em 0;
+  background: url(microselectshapes.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+@media (max-width: 770px) {
+  #specialshapes .col-sm-5 {
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
