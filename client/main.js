@@ -6,6 +6,7 @@ Global client-side code. Loads last.
 
 /+ ---------------------------------------------------- */
 
+
 Template.homepage.rendered = function () {
   
     var route = Router.current();

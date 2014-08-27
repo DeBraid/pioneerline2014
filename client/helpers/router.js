@@ -31,9 +31,13 @@ var filters = {
 
 }
 
-// Router.onBeforeAction(filters.myFilter, {only: ['items']});
 Router.onBeforeAction(function () {
   document.body.className = "noBackgroundImage"
+});
+
+// remove text when route changes
+Router.onAfterAction(function () {
+  $('.reactive-table-input .form-control').val('');
 });
 
 // Routes
