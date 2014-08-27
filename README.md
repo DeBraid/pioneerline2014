@@ -1,12 +1,10 @@
-# A fork from Void
+# Web App for Pioneer Balloons Canada 
 
-App for Balloon Company.  
+# Pioneer Line 2014  
 
 By Derek Braid at [cacheflow.ca](http://cacheflow.ca).
 
-Uses [Meteor](http://meteor.com) and [IronRouter](https://github.com/EventedMind/iron-router).
-
-Hosted at [Pioneer Line](http://pioneerline.com) 
+To be hosted at [Pioneer Line](http://www.pioneerline2014.ca) 
 
 ## Inspiration
 
