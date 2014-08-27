@@ -1,11 +1,15 @@
 <template name="filterbuttons">
   
   <div class="filter-button-container">
+    {{#if _ "isString" "foo" }}
       <button id="Globe" type="submit" name="Globe" class="btn btn-responsive btn-warning pull-right">Globe</button>
       <button id="Agate" type="submit" name="Agate" class="btn btn-responsive btn-warning pull-right">Agate</button>
       <button id="Metallic" type="submit" name="Metallic" class="btn btn-responsive btn-warning pull-right">Metallic</button>
       <button id="Jewel" type="submit" name="jewel" class="btn btn-responsive btn-warning pull-right">Jewel</button>
       <button id="Standard" type="submit" name="Standard" class="btn btn-responsive btn-warning pull-right">Standard</button>
+      {{else}}
+      <h1>no string</h1>
+      {{/if}}
   </div>
   
   

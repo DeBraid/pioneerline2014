@@ -6,6 +6,7 @@
     "reactive-table": {},
     "font-awesome": {},
     "simple-form": {},
-    "spin": {}
+    "spin": {},
+    "underscore-helper": {}
   }
 }
