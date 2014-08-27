@@ -1,6 +1,8 @@
 Template.multicolourprint.settings = function () {
         return {
             showFilter: true,
+            rowsPerPage: 5,
+            showNavigation: 'auto',
             fields: [{
                             key: 'Product Description',
                             label: 'Product',
