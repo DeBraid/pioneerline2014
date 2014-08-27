@@ -1,0 +1,49 @@
+<template name="multicolourprint">  
+  <div class="container">
+
+    <div class="row">
+      {{> multiheader }}
+    </div>
+
+    <div class="row">
+      <h4>Two-Colour Print</h4>
+      {{> reactiveTable collection=twocolourballoons settings=settings}}
+    </div>
+
+    <div class="row">
+      {{> threecolourplus }}
+    </div>
+    
+    <div class="row">
+      {{> multicolourprinting }}
+    </div>
+    
+    <div class="row">      
+      {{> yield region='charges'}}
+    </div>
+  </div>
+</template>
+
+<template name="multiheader">
+  <h1>Latex Multi-Colour Print Balloons</h1>
+  
+  <p>Prices below include balloons with one-side imprint; add additional charges.</p>
+  <aside>Price per Balloon $CAD <span>2ABCD</span></aside>
+
+</template> 
+
+<template name="multicolourprinting">
+  <h3>IMPRESS V™ Multi-Colour Printing</h3>
+
+  <ul>
+    <li>Due to unique challenges involved in printing on a round, flexible surface, ink colours will shift approximately 1/8".</li>
+    <li>Order acceptance will be based on approval of artwork and printing capabilities.  A pre-production sample may be required.</li>
+    <li>Balloons need to be inflated and viewed from normal viewing distance of 5 ft. in order to evaluate colours and printing.</li>
+  </ul>
+
+</template>
+
+<template name="threecolourplus">
+  <h4>Three, Four, Five Colour Spot Print</h4>
+      {{> reactiveTable collection=threecolourplus settings=settings}}
+</template>

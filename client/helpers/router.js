@@ -121,41 +121,6 @@ Router.map(function() {
     }
   });
 
-  this.route('threecolourplus', {
-    path: '/threecolourplus',
-    template: 'threecolourplus',
-    yieldTemplates: {
-      'charges': {to: 'charges'}
-    }, 
-    waitOn: function () {
-      return [Meteor.subscribe('threecolourplus'),
-              Meteor.subscribe('charges')];
-    },
-    data: function () {
-      return {
-        threecolourplus: Threecolourplus.find(),
-        charges: Charges.find()
-      }
-    }
-  });
-
-  this.route('twocolourballoons', {
-    path: '/twocolourballoons',
-    template: 'twocolourballoons',
-    yieldTemplates: {
-      'charges': {to: 'charges'}
-    }, 
-    waitOn: function () {
-      return [Meteor.subscribe('twocolourballoons'),
-              Meteor.subscribe('charges')];
-    },
-    data: function () {
-      return {
-        twocolourballoons: Twocolourballoons.find(),
-        charges: Charges.find()
-      }
-    }
-  });
 
   this.route('adwave', {
     path: '/adwave',
@@ -382,6 +347,23 @@ Router.map(function() {
       return {
         promoflags: Promoflags.find(),      
         econflags: Econflags.find()      
+      }
+    }
+  });
+
+  this.route('multicolourprint', {
+    path: '/multicolourprint',
+    template: 'multicolourprint',
+    waitOn: function () {
+      return [Meteor.subscribe('twocolourballoons'),
+              Meteor.subscribe('threecolourplus'),
+              Meteor.subscribe('charges')];
+    },
+    data: function () {
+      return {
+        twocolourballoons: Twocolourballoons.find(),      
+        threecolourplus: Threecolourplus.find(),
+        charges: Charges.find()
       }
     }
   });
