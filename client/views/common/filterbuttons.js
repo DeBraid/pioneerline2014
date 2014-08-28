@@ -34,3 +34,9 @@ Template.filterbuttons.rendered = function() {
 Template.filterbuttons.created = function() {
   this.state = new ReactiveDict;
 };
+
+
+Template.filterbuttons.buttonData = function() {
+
+    return Roundballoons.find();
+};
