@@ -61,8 +61,8 @@ Template.stretch.settings = function () {
                       return new Spacebars.SafeString(html);
                     }
                 }, {
-                    key: 'Printing',
-                    label: 'Printing'
+                    key: 'ItemNum',
+                    label: 'Item #'
                 }, {
                     key: '1',
                     label: '1'
