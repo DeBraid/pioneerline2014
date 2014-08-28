@@ -64,14 +64,22 @@ Template.reactiveTable.rendered = function () {
         }
 };
 
+// UI.registerHelpers({
+//   testButtons: function() {
+//     var words = UI._templateInstance().state.get('words');
+//     return _.map(words, function(word) {
+//       return {name: word};
+//     });
+//   }
+// });
 
-UI.registerHelper('testButtons', function () {
-        return [ 
-          { name: "Alice", score: 150 }, 
-          { name: "Bob", score: 125 } 
-        ]
-    }
-)
+// UI.registerHelper('testButtons', function () {
+//         return [ 
+//           { name: "Alice", score: 150 }, 
+//           { name: "Bob", score: 125 } 
+//         ]
+//     }
+// )
 
 // var _deps = new Deps.Dependency;
 // var buttonData = {};
@@ -110,7 +118,7 @@ UI.registerHelper('testButtons', function () {
 // Template.filterbuttons.rendered = function () {
 //       var hoot = [];
 //     var data = [];
-//     $('.productname').map(function () {
+//     $('.productname.productname').map(function () {
 //       var words = [];
 //       words.push($(this).text().split(' '));
 //       data.push( _.flatten(words, false) );
