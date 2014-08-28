@@ -27,6 +27,7 @@ Template.contact.rendered = function () {
     }
 };
 
+
 Template.footer.rendered = function () {
   var height_diff = $(window).height() - $('body').height();
     if ( height_diff > 0 ) {
@@ -62,3 +63,60 @@ Template.reactiveTable.rendered = function () {
             buttonGroup.get(1).remove();
         }
 };
+
+
+UI.registerHelper('testButtons', function () {
+        return [ 
+          { name: "Alice", score: 150 }, 
+          { name: "Bob", score: 125 } 
+        ]
+    }
+)
+
+// var _deps = new Deps.Dependency;
+// var buttonData = {};
+
+
+
+// UI.registerHelper('setButtons', function () {
+//     _deps.depend();
+
+//       var data = [];
+//     $('.productname').map(function () {
+//       var words = [];
+//       words.push($(this).text().split(' '));
+//       data.push( _.flatten(words, false) );
+      
+//       stuff = _.flatten(data);
+//       uniqStr = _.uniq(stuff);
+
+//         uniqStr.map(function (str) {
+//            return buttonData = {
+//                 id: str
+//             } 
+
+//         });
+        
+        
+//     });
+
+//   }
+// );
+
+// Template.reactiveTable.rendered = function () {
+//     _deps.changed();
+// };
+
+// Template.filterbuttons.rendered = function () {
+//       var hoot = [];
+//     var data = [];
+//     $('.productname').map(function () {
+//       var words = [];
+//       words.push($(this).text().split(' '));
+//       data.push( _.flatten(words, false) );
+      
+//       stuff = _.flatten(data);
+//       uniqStr = _.uniq(stuff);
+      
+//     });
+// }; 
