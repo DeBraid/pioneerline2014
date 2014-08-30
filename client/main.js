@@ -47,6 +47,14 @@ Template.reactiveTable.events({
     }
 });
 
+Template.filterbuttons.created = function() {
+  this.state = new ReactiveDict;
+};
+
+Template.reactiveTable.rendered = function () {
+    UI.insert( UI.render( Template.filterbuttons ) , $('.reactive-table-filter').get(0) )
+};
+
 Template.filterbuttons.helpers({
   testButtons: function () {
     var words = UI._templateInstance().state.get('words');
@@ -56,31 +64,61 @@ Template.filterbuttons.helpers({
   }
 });
 
+// Template.filterbuttons.rendered = function() {
+//   var self = this;
+//   Meteor.defer(function  (argument) {
+//       var names = $('.productname').text().split(' ');
+
+//   if ( names.length > 1 ) {
+//     console.log("filter ran, NO productname exists", names);
+//      self.state.set('words', names);
+
+//   } else {
+//         console.log("filterbuttons rendered, no trace of productname ");
+//         console.log("in filter else statement names are:", names);
+//             var data = [];
+
+//         var words = $('h1').map(function () {
+//           var wordArr = [];
+//           wordArr.push($(this).text().split(' '));
+//           data.push( _.flatten(wordArr, false) );
+          
+//           stuff = _.flatten(data);
+//           uniqStr = _.uniq(stuff);
+//           return uniqStr;
+          
+//         });
+
+            
+//           self.state.set('words', _.uniq(words));
+
+//       }
+//   })
+
+// };
+
+
+
 Template.filterbuttons.rendered = function() {
-  
+  var self = this;
 
-    var data = [];
-
-    var words = $('h1').map(function () {
-      var wordArr = [];
-      wordArr.push($(this).text().split(' '));
-      data.push( _.flatten(wordArr, false) );
+  Meteor.defer(function  (argument) {
+      var names = $('.productname').text().split(' ');
       
-      stuff = _.flatten(data);
-      uniqStr = _.uniq(stuff);
-      return uniqStr;
-      
-    });
-
-  this.state.set('words', _.uniq(words));
-
+      console.log('names inside 1st defer are: ', names);
+      Meteor.defer(function  (argument) {
+          // body...
+          var names = $('.productname').text().split(' ');
+          console.log('names inside 2nd defer are: ', names);
+          self.state.set('words', names);
+      })
+  })
 
 };
 
-Template.filterbuttons.created = function() {
-  this.state = new ReactiveDict;
-};
 
-Template.reactiveTable.rendered = function () {
-    UI.insert( UI.render( Template.filterbuttons ) , $('.reactive-table-filter').get(0) )
-};
+Template.filterbuttons.helpers({
+    foo: function () {
+       return ["baz","marg","scrooge"];
+    }
+});
