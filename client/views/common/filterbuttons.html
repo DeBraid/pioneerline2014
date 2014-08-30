@@ -11,13 +11,12 @@
 
     
   {{#each testButtons }}
-    <button id="{{ name }}" type="submit" name="{{ name }}" class="btn btn-responsive btn-warning pull-right">{{ name }}</button>
+    <button id="{{ name }}" type="submit" name="{{ name }}" class="tags btn btn-responsive btn-warning pull-right">{{ name }}</button>
   {{/each}}
 
-  {{#each buttonData }}
-    <button id="{{ [Product Description] }}" type="submit" name="{{ [Product Description] }}" class="btn btn-responsive btn-warning pull-right">{{ [Product Description] }}</button>
+  {{#each dynamicButtons }}
+    <button id="{{ name }}" type="submit" name="{{ name }}" class="tags btn btn-responsive btn-warning pull-right">{{ name }}</button>
   {{/each}}
-
 
   </div>
 </template>  

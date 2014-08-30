@@ -18,17 +18,14 @@ Router.configure({
 
 var filters = {
 
-  myFilter: function () {
-    // do something
-  },
-
-  isLoggedIn: function() {
-    if (!(Meteor.loggingIn() || Meteor.user())) {
-      alert('Please Log In First.')
-      this.stop();
+  removeExtraButtons: function () {
+    var buttonGroup = $('.filter-button-container'); 
+    
+    if ( buttonGroup.length > 1 ) {
+        buttonGroup.get(1).remove();
     }
-  }
 
+  }
 }
 
 Router.onBeforeAction(function () {
@@ -39,6 +36,8 @@ Router.onBeforeAction(function () {
 Router.onAfterAction(function () {
   $('.reactive-table-input .form-control').val('');
 });
+
+// Router.onAfterAction(filters.removeExtraButtons)
 
 // Routes
 

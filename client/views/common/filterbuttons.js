@@ -1,3 +1,4 @@
+// if button is clicked insert text into filter box
 Template.filterbuttons.events({
     'click .tags': function (e,t) {
         e.preventDefault();
@@ -13,30 +14,3 @@ Template.filterbuttons.events({
 
     }
 });
-
-Template.filterbuttons.helpers({
-  testButtons: function() {
-    var words = UI._templateInstance().state.get('words');
-    return _.map(words, function(word) {
-      console.log(word);
-      return {name: word};
-    });
-  }
-});
-
-Template.filterbuttons.rendered = function() {
-   var words = $('h1').map(function() {
-    return $(this).text();
-  });
-  this.state.set('words', _.uniq(words));
-};
-
-Template.filterbuttons.created = function() {
-  this.state = new ReactiveDict;
-};
-
-
-Template.filterbuttons.buttonData = function() {
-
-    return Roundballoons.find();
-};
