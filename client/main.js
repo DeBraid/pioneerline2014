@@ -56,7 +56,7 @@ Template.reactiveTable.rendered = function () {
 };
 
 Template.filterbuttons.helpers({
-  testButtons: function () {
+  dynamicButtons: function () {
     var words = UI._templateInstance().state.get('words');
     return _.map(words, function(word) {
       return {name: word};
@@ -76,18 +76,18 @@ Template.filterbuttons.helpers({
 //   } else {
 //         console.log("filterbuttons rendered, no trace of productname ");
 //         console.log("in filter else statement names are:", names);
-//             var data = [];
+        //     var data = [];
 
-//         var words = $('h1').map(function () {
-//           var wordArr = [];
-//           wordArr.push($(this).text().split(' '));
-//           data.push( _.flatten(wordArr, false) );
+        // var words = $('h1').map(function () {
+        //   var wordArr = [];
+        //   wordArr.push($(this).text().split(' '));
+        //   data.push( _.flatten(wordArr, false) );
           
-//           stuff = _.flatten(data);
-//           uniqStr = _.uniq(stuff);
-//           return uniqStr;
+        //   stuff = _.flatten(data);
+        //   uniqStr = _.uniq(stuff);
+        //   return uniqStr;
           
-//         });
+        // });
 
             
 //           self.state.set('words', _.uniq(words));
@@ -104,13 +104,14 @@ Template.filterbuttons.rendered = function() {
 
   Meteor.defer(function  (argument) {
       var names = $('.productname').text().split(' ');
-      
       console.log('names inside 1st defer are: ', names);
+
       Meteor.defer(function  (argument) {
-          // body...
           var names = $('.productname').text().split(' ');
           console.log('names inside 2nd defer are: ', names);
-          self.state.set('words', names);
+          console.log('unique 2nd defer: ', _.uniq(names));
+
+          self.state.set('words', _.uniq(names));
       })
   })
 
