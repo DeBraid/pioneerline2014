@@ -47,67 +47,33 @@ Template.reactiveTable.events({
     }
 });
 
-
-// UI.registerHelper('testButtons', function () {
-//     return [ 
-//       { name: "Alice", score: 150 }, 
-//       { name: "Bob", score: 125 } 
-//     ]
-// });
-
-// Template.filterbuttons.rendered = function () {
-//       var hoot = [];
-//     var data = [];
-//     $('.productname').map(function () {
-//       var words = [];
-//       words.push($(this).text().split(' '));
-//       data.push( _.flatten(words, false) );
-      
-//       stuff = _.flatten(data);
-//       uniqStr = _.uniq(stuff);
-      
-//     });
-// }; 
-
-
-
-// UI.registerHelper('testButtons', function () {
-//     renderDep.depend();
-//     return words;
-// });
-
-// Template.filterbuttons.rendered = function () {
-
-//     var words = $('h1').text();
-
-//     renderDep.changed();
-    
-// };
-
-var renderDep = new Deps.Dependency();
-
 Template.filterbuttons.helpers({
-  testButtons: function() {
-    
-    renderDep.depend();
-    
+  testButtons: function () {
     var words = UI._templateInstance().state.get('words');
     return _.map(words, function(word) {
       return {name: word};
     });
-    
-
   }
 });
 
 Template.filterbuttons.rendered = function() {
   
-  renderDep.changed();
 
-  var words = $('h1').map(function() {
-    return $(this).text();
-  });
+    var data = [];
+
+    var words = $('h1').map(function () {
+      var wordArr = [];
+      wordArr.push($(this).text().split(' '));
+      data.push( _.flatten(wordArr, false) );
+      
+      stuff = _.flatten(data);
+      uniqStr = _.uniq(stuff);
+      return uniqStr;
+      
+    });
+
   this.state.set('words', _.uniq(words));
+
 
 };
 
