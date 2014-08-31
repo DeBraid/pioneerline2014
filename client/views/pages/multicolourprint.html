@@ -6,12 +6,12 @@
     </div>
 
     <div class="row">
-      <h4>Two-Colour Print</h4>
+      <h3>Two-Colour Print</h3>
       {{> reactiveTable collection=twocolourballoons settings=settings}}
     </div>
 
     <div class="row">
-      {{> threecolourplus }}
+      {{> threecolourplustable }}
     </div>
     
     <div class="row">
@@ -19,21 +19,22 @@
     </div>
     
     <div class="row">      
-      {{> yield region='charges'}}
+      {{> multicharges }}
     </div>
   </div>
 </template>
 
 <template name="multiheader">
   <h1>Latex Multi-Colour Print Balloons</h1>
+  {{> biodeg }}
   
   <p>Prices below include balloons with one-side imprint; add additional charges.</p>
-  <aside>Price per Balloon $CAD <span>2ABCD</span></aside>
+  <aside>Price per Balloon  <span>2ABCD</span></aside>
 
 </template> 
 
 <template name="multicolourprinting">
-  <h3>IMPRESS V™ Multi-Colour Printing</h3>
+  <h4>IMPRESS V™ Multi-Colour Printing</h4>
 
   <ul>
     <li>Due to unique challenges involved in printing on a round, flexible surface, ink colours will shift approximately 1/8".</li>
@@ -43,7 +44,20 @@
 
 </template>
 
-<template name="threecolourplus">
-  <h4>Three, Four, Five Colour Spot Print</h4>
+<template name="threecolourplustable">
+  <h3>Three, Four, Five Colour Spot Print</h3>
+  <aside>Price per Balloon  <span>ABCD</span></aside>
+
       {{> reactiveTable collection=threecolourplus settings=settings}}
+</template>
+
+<template name="multicharges">
+<h4>Charges</h4>
+  <ul>
+    <li><strong>Cut Charge:</strong>  $50.00(A) per colour, per side one time only</li>
+    <li><strong>Second-Side Same Imprint:</strong>  $.02(A) per balloon</li>
+    <li><strong>Second-Side Different Imprint:</strong>  $.048(A) per balloon</li>
+    <li><strong>Custom Ink Blend:</strong>  $20.00(A) per ink colour; custom blends are not inventoried.*Exact PMS colour matches cannot be guaranteed*</li>
+    <li><strong>Art Charge:</strong>  $50.00(A) per hour.</li>
+  </ul>
 </template>

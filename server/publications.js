@@ -60,8 +60,8 @@ Meteor.publish('heartballoons', function() {
   return Heartballoons.find();
 });
 
-Meteor.publish('quicklinkround', function() {
-  return Quicklinkround.find();
+Meteor.publish('quicklinkonecolour', function() {
+  return Quicklinkonecolour.find();
 });
 
 Meteor.publish('threecolourplus', function() {
@@ -98,4 +98,14 @@ Meteor.publish('stretchtablecovers', function() {
 });
 Meteor.publish('popupbanners', function() {
   return Popupbanners.find();
+});
+
+Meteor.publish('admaxminisportballs', function() {
+  return Admaxminisportballs.find();
+});
+Meteor.publish('beachballs', function() {
+  return Beachballs.find();
+});
+Meteor.publish('adpunchballs', function() {
+  return Adpunchballs.find();
 });

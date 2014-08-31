@@ -15,30 +15,31 @@ Router.configure({
 });
 
 // Filters
-
 var filters = {
 
-  myFilter: function () {
-    // do something
-  },
-
-  isLoggedIn: function() {
-    if (!(Meteor.loggingIn() || Meteor.user())) {
-      alert('Please Log In First.')
-      this.stop();
+  removeExtraButtons: function () {
+    var buttonGroup = $('.filter-button-container'); 
+    
+    if ( buttonGroup.length > 1 ) {
+        buttonGroup.get(1).remove();
     }
+  }, 
+  clearInputValue: function () {
+    var inp = $('.reactive-table-input');
+    inp.val('');
+    inp.trigger('keyup');
+  },
+  setBackground: function () {
+    document.body.className = "noBackgroundImage"
   }
-
 }
 
-Router.onBeforeAction(function () {
-  document.body.className = "noBackgroundImage"
-});
+Router.onBeforeAction(filters.setBackground);
 
 // remove text when route changes
-Router.onAfterAction(function () {
-  $('.reactive-table-input .form-control').val('');
-});
+Router.onBeforeAction(filters.clearInputValue);
+
+// Router.onAfterAction(filters.removeExtraButtons)
 
 // Routes
 
@@ -103,19 +104,19 @@ Router.map(function() {
     }
   });
 
-  this.route('quicklinkround', {
-    path: '/quicklinkround',
-    template: 'quicklinkround',
+  this.route('quicklinkonecolour', {
+    path: '/quicklinkonecolour',
+    template: 'quicklinkonecolour',
     yieldTemplates: {
       'charges': {to: 'charges'}
     }, 
     waitOn: function () {
-      return [Meteor.subscribe('quicklinkround'),
+      return [Meteor.subscribe('quicklinkonecolour'),
               Meteor.subscribe('charges')];
     },
     data: function () {
       return {
-        quicklinkround: Quicklinkround.find(),
+        quicklinkonecolour: Quicklinkonecolour.find(),
         charges: Charges.find()
       }
     }
@@ -377,6 +378,45 @@ Router.map(function() {
     data: function () {
       return {
         geninfo: Geninfo.find()
+      }
+    }
+  });
+
+  this.route('admaxminisportballs', {
+    path: '/admaxminisportballs',
+    template: 'admaxminisportballs',
+    waitOn: function () {
+      return Meteor.subscribe('admaxminisportballs');
+    },
+    data: function () {
+      return {
+        admaxminisportballs: Admaxminisportballs.find()
+      }
+    }
+  });
+
+  this.route('adpunchballs', {
+    path: '/adpunchballs',
+    template: 'adpunchballs',
+    waitOn: function () {
+      return Meteor.subscribe('adpunchballs');
+    },
+    data: function () {
+      return {
+        adpunchballs: Adpunchballs.find()
+      }
+    }
+  });
+
+  this.route('beachballs', {
+    path: '/beachballs',
+    template: 'beachballs',
+    waitOn: function () {
+      return Meteor.subscribe('beachballs');
+    },
+    data: function () {
+      return {
+        beachballs: Beachballs.find()
       }
     }
   });

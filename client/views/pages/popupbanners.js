@@ -16,6 +16,9 @@ Template.popupbanners.settings = function () {
                       return new Spacebars.SafeString(html);
                     }
                 }, {
+                    key: 'Panels', 
+                    label: 'Panels'
+                },{
                     key: 'ItemNum', 
                     label: 'Item #'
                 }, {
