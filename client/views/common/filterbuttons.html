@@ -2,9 +2,23 @@
   
   <div class="filter-button-container">
 
-  {{#each dynamicButtons }}
+  <!-- {{#each dynamicButtons }}
     <button id="{{ name }}" type="submit" name="{{ name }}" class="tags btn btn-responsive btn-warning pull-right">{{ name }}</button>
-  {{/each}}
+  {{/each}} -->
+
+  <!-- Single button -->
+  <div class="btn-group pull-right">
+    <button type="button" class="btn btn-warning btn-lg dropdown-toggle pull-right" data-toggle="dropdown">
+      Filter <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      {{#each dynamicButtons }}
+        <li><a id="{{ name }}" class="tags" href="#">{{ name }}</a></li>
+      {{/each}}
+        <li class="divider"></li>
+        <li><a href="{{pathFor 'homepage'}}">Home</a></li>
+    </ul>
+  </div>
 
   </div>
 </template>  

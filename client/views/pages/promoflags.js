@@ -18,6 +18,9 @@ Template.promoflagscontent.settings = function () {
                     key: 'Includes',
                     label: 'Includes'
                 },{
+                    key: 'ItemNum',
+                    label: 'Item #'
+                },{
                     key: '1',  
                     label: '1'
                 }, {
@@ -51,13 +54,13 @@ Template.econflags.settings = function () {
                                 '</div>';
                         return new Spacebars.SafeString(html);
                     }
-                }, {
+                },{
+                    key: 'Printing',  
+                    label: 'Printing'
+                },  {
                     key: 'Includes',
                     label: 'Includes'
                 },{
-                    key: '1',  
-                    label: '1'
-                }, {
                     key: '2 to 5',
                     label: '2 to 5'
                 }, {

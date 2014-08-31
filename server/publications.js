@@ -60,8 +60,8 @@ Meteor.publish('heartballoons', function() {
   return Heartballoons.find();
 });
 
-Meteor.publish('quicklinkround', function() {
-  return Quicklinkround.find();
+Meteor.publish('quicklinkonecolour', function() {
+  return Quicklinkonecolour.find();
 });
 
 Meteor.publish('threecolourplus', function() {

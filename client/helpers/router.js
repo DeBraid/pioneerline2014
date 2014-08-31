@@ -15,7 +15,6 @@ Router.configure({
 });
 
 // Filters
-
 var filters = {
 
   removeExtraButtons: function () {
@@ -24,18 +23,21 @@ var filters = {
     if ( buttonGroup.length > 1 ) {
         buttonGroup.get(1).remove();
     }
-
+  }, 
+  clearInputValue: function () {
+    var inp = $('.reactive-table-input');
+    inp.val('');
+    inp.trigger('keyup');
+  },
+  setBackground: function () {
+    document.body.className = "noBackgroundImage"
   }
 }
 
-Router.onBeforeAction(function () {
-  document.body.className = "noBackgroundImage"
-});
+Router.onBeforeAction(filters.setBackground);
 
 // remove text when route changes
-Router.onAfterAction(function () {
-  $('.reactive-table-input .form-control').val('');
-});
+Router.onBeforeAction(filters.clearInputValue);
 
 // Router.onAfterAction(filters.removeExtraButtons)
 
@@ -102,19 +104,19 @@ Router.map(function() {
     }
   });
 
-  this.route('quicklinkround', {
-    path: '/quicklinkround',
-    template: 'quicklinkround',
+  this.route('quicklinkonecolour', {
+    path: '/quicklinkonecolour',
+    template: 'quicklinkonecolour',
     yieldTemplates: {
       'charges': {to: 'charges'}
     }, 
     waitOn: function () {
-      return [Meteor.subscribe('quicklinkround'),
+      return [Meteor.subscribe('quicklinkonecolour'),
               Meteor.subscribe('charges')];
     },
     data: function () {
       return {
-        quicklinkround: Quicklinkround.find(),
+        quicklinkonecolour: Quicklinkonecolour.find(),
         charges: Charges.find()
       }
     }

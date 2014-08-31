@@ -108,18 +108,21 @@ Template.filterbuttons.rendered = function() {
 
       Meteor.defer(function  (argument) {
           var names = $('.productname').text().split(' ');
-          console.log('names inside 2nd defer are: ', names);
-          console.log('unique 2nd defer: ', _.uniq(names));
 
-          self.state.set('words', _.uniq(names));
+          if ( names == '' || names.length < 1 ) {
+            console.log('names is empty string, clearing input');
+            $('.reactive-table-input').val('');
+            var names = $('.productname').text().split(' ');
+            console.log('unique 2nd defer: ', _.uniq(names));
+
+            self.state.set('words', _.uniq(names));  
+          } else {
+
+            console.log('unique 2nd defer: ', _.uniq(names));
+
+            self.state.set('words', _.uniq(names));
+          }
       })
   })
 
 };
-
-
-Template.filterbuttons.helpers({
-    foo: function () {
-       return ["baz","marg","scrooge"];
-    }
-});

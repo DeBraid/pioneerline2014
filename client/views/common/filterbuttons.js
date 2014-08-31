@@ -3,7 +3,7 @@ Template.filterbuttons.events({
     'click .tags': function (e,t) {
         e.preventDefault();
         
-        var selection = e.target.name,
+        var selection = e.target.id,
         inp = $('.reactive-table-input');
         
         // 1.  insert text into filter/search bar
